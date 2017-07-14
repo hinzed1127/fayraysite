@@ -21,8 +21,9 @@ export default function Icon(props) {
 			viewBox='0 0 1024 1024'
 		>
 
-		{props.icon.map((path) => (
+		{props.icon.map((path, index) => (
 			<path
+				key={index}
 				style={styles.path}
 				d={path}
 			></path>

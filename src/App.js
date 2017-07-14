@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './index.css';
 import Rowbox from './components/Rowbox';
 import IconRow from './components/IconRow';
 
@@ -8,7 +9,7 @@ class App extends Component {
     return (
       <main className='container'>
         <div className='row row1'>
-          <h1>Fay Ray</h1>
+          <h1 className='nameHeader'>Fay Ray</h1>
           <IconRow />
         </div>
         <div className='row row2'>

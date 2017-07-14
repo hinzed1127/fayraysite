@@ -1,10 +1,14 @@
+@font-face {
+  font-family: 'GothamUltraItalic';
+  src: url('./fonts/GothamUltraItalic.ttf') format('truetype');
+}
+
 body {
   font-family: 'Droid Sans', sans-serif;
 }
 
-.logo {
-  animation: spin infinite 20s linear;
-  height: 80px;
+svg.icon:hover {
+  animation: spin infinite 1s linear;
 }
 
 @keyframes spin {
@@ -30,11 +34,30 @@ body {
 .row1 {
   height: calc(100vh - 50vh);
   color: #fff;
+  /*background: linear-gradient(45deg, rgb(40,90,130), rgb(150,70,110));*/
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
   animation: Gradient 6s ease infinite;
 }
 
+.nameHeader {
+  font-family: 'GothamUltraItalic';
+  align-self: center;
+  margin-left: 10%;
+  font-size: 96px;
+  /*color: rgb(135, 230, 244);*/
+  color: #551A8B;
+  /*text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;*/
+   text-shadow:
+    0 0  100px #fff,
+    0 0  10px #fff,
+    0 0  15px #fff,
+    0 0  20px #FFF,
+    0 0  35px #FFF,
+    0 0  40px #FFF,
+    0 0  60px #FFF,
+    0 0  90px #FFF;
+}
 
 .iconRow {
   display: flex;
@@ -68,4 +91,14 @@ body {
   .row3 {
     height: 30vh;
   }
+
+  .nameHeader {
+    font-size: 60px;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
 }
