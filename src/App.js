@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <main className='container'>
         <div className='row row1'>
-          <h1 className='nameHeader'>Fay Ray</h1>
+          <h1 className='nameHeader'>FAY RAY</h1>
           <IconRow />
         </div>
         <div className='row row2'>
