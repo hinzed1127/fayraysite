@@ -17,15 +17,14 @@ svg.icon:hover {
 }
 
 .rowbox {
-  border: 1px solid pink;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
 }
 
 .row {
-  border: 1px solid red;
   height: 25vh;
   display: flex;
   justify-content: space-between;

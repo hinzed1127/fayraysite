@@ -13,13 +13,13 @@ class App extends Component {
           <IconRow />
         </div>
         <div className='row row2'>
-          <Rowbox text='Is a band'/>
-          <Rowbox text='Has a new single'/>
+          <Rowbox text='Is a band' number='1'/>
+          <Rowbox text='Has a new single' number='2'/>
         </div>
         <div className='row row3'>
-          <Rowbox text='Plays shows'/>
-          <Rowbox text='Takes photos'/>
-          <Rowbox text='Uses email'/>
+          <Rowbox text='Plays shows' number='3'/>
+          <Rowbox text='Takes photos' number='4'/>
+          <Rowbox text='Uses email' number='5'/>
         </div>
       </main>
     );
