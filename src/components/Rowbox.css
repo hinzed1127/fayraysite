@@ -1,7 +1,7 @@
 .btn {
   background: none;
   border: 2px solid;
-  border-bottom-width: 4px;
+  /*border-bottom-width: 4px;*/
   /*font: inherit;*/
   letter-spacing: inherit;
   text-transform: inherit;
@@ -9,12 +9,15 @@
 }
 
 .btn-1 {
-  color: #9c89f7;
+  /*color: #9c89f7;*/
+  background-color: var(--orange);
 }
 .btn-1:hover {
-          animation: halftone 1s infinite alternate;
-  background: radial-gradient(ellipse, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 0 0/1.25em 1.25em, radial-gradient(ellipse, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 6.25em 6.25em/1.25em 1.25em;
-  color: #e4f789;
+animation: halftone 1s infinite alternate;
+background:
+  radial-gradient(ellipse, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em)0 0/1.25em 1.25em,
+  radial-gradient(ellipse, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 6.25em 6.25em/1.25em 1.25em;
+color: #e4f789;
 }
 
 @keyframes halftone {
@@ -23,10 +26,11 @@
   }
 }
 .btn-2 {
-  color: #82f6d8;
+  /*color: #82f6d8;*/
+  background-color: var(--coral);
 }
 .btn-2:hover {
-          animation: stripes-move 0.75s infinite linear;
+  animation: stripes-move 0.75s infinite linear;
   background: repeating-linear-gradient(45deg, #82f6d8 0, #82f6d8 0.25em, transparent 0.25em, transparent 0.5em);
   color: #f682a0;
 }
@@ -37,12 +41,15 @@
   }
 }
 .btn-3 {
-  color: #d3f169;
+  /*color: #d3f169;*/
+  background-color: var(--blue);
 }
 .btn-3:hover {
-          animation: sawtooth 0.35s infinite linear;
-  background: linear-gradient(45deg, #d3f169 0.5em, transparent 0.5em) 0 0/1em 1em, linear-gradient(-45deg, #d3f169 0.5em, transparent 0.5em) 0 0/1em 1em;
-  color: #8769f1;
+animation: sawtooth 0.35s infinite linear;
+background:
+  linear-gradient(45deg, #d3f169 0.5em, transparent 0.5em) 0 0/1em 1em,
+  linear-gradient(-45deg, #d3f169 0.5em, transparent 0.5em) 0 0/1em 1em;
+color: #8769f1;
 }
 
 @keyframes sawtooth {
@@ -51,13 +58,18 @@
   }
 }
 .btn-4 {
-  color: #eea163;
+  /*color: #eea163;*/
+  background-color: var(--purple);
 }
 .btn-4:hover {
-          animation: zigzag 1s linear infinite;
-  background: linear-gradient(135deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) -0.5em 0, linear-gradient(225deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) -0.5em 0, linear-gradient(315deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) 0 0, linear-gradient(45deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) 0 0;
-  background-size: 0.75em 0.75em;
-  color: #63b0ee;
+animation: zigzag 1s linear infinite;
+background:
+  linear-gradient(135deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) -0.5em 0,
+  linear-gradient(225deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) -0.5em 0,
+  linear-gradient(315deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) 0 0,
+  linear-gradient(45deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) 0 0;
+background-size: 0.75em 0.75em;
+color: #63b0ee;
 }
 
 @keyframes zigzag {
@@ -66,12 +78,15 @@
   }
 }
 .btn-5 {
-  color: #7cf07f;
+  /*color: #7cf07f;*/
+  background-color: var(--pink);
 }
 .btn-5:hover {
-          animation: blinds 1s linear infinite alternate;
-  background: linear-gradient(0deg, #7cf07f 25%, transparent 25%) 0 0/0.5em 0.5em, linear-gradient(0deg, #88d6f3 50%, transparent 50%) 0 0/1em 1em;
-  color: #f07ced;
+animation: blinds 1s linear infinite alternate;
+background:
+  linear-gradient(0deg, #7cf07f 25%, transparent 25%) 0 0/0.5em 0.5em,
+  linear-gradient(0deg, #88d6f3 50%, transparent 50%) 0 0/1em 1em;
+color: #f07ced;
 }
 
 @keyframes blinds {
@@ -85,9 +100,13 @@
   color: #f9879b;
 }
 .btn-6:hover {
-          animation: pulse 1s ease-in infinite;
-  background: radial-gradient(circle, rgba(249, 135, 155, 0.25) 43%, rgba(0, 0, 0, 0) 50%) 0 0/1em 1em, radial-gradient(circle, rgba(249, 135, 155, 0.25) 43%, rgba(0, 0, 0, 0) 50%) 0.5em 0.5em/2em 2em;
-  color: #0bdcb7;
+animation: pulse 1s ease-in infinite;
+background:
+  radial-gradient(circle, rgba(249, 135, 155, 0.25) 43%,
+  rgba(0, 0, 0, 0) 50%) 0 0/1em 1em,
+  radial-gradient(circle, rgba(249, 135, 155, 0.25) 43%,
+  rgba(0, 0, 0, 0) 50%) 0.5em 0.5em/2em 2em;
+color: #0bdcb7;
 }
 
 

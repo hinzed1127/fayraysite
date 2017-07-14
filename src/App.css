@@ -3,6 +3,14 @@
   src: url('./fonts/GothamUltraItalic.ttf') format('truetype');
 }
 
+:root {
+  --orange: #EE7752 ;
+  --pink: #E73C7E ;
+  --blue: #23A6D5 ;
+  --coral: #23D5AB ;
+  --purple: #551A8B;
+}
+
 body {
   font-family: 'Droid Sans', sans-serif;
 }
@@ -34,7 +42,7 @@ svg.icon:hover {
   height: calc(100vh - 50vh);
   color: #fff;
   /*background: linear-gradient(45deg, rgb(40,90,130), rgb(150,70,110));*/
-  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background: linear-gradient(-45deg, var(--orange), var(--pink),var(--blue),var(--coral));
   background-size: 400% 400%;
   animation: Gradient 6s ease infinite;
 }
@@ -45,7 +53,7 @@ svg.icon:hover {
   margin-left: 10%;
   font-size: 96px;
   /*color: rgb(135, 230, 244);*/
-  color: #551A8B;
+  color: var(--purple);
   /*text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;*/
    text-shadow:
     0 0  100px #fff,
