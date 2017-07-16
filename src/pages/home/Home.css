@@ -1,20 +1,3 @@
-@font-face {
-  font-family: 'GothamUltraItalic';
-  src: url('../../fonts/GothamUltraItalic.ttf') format('truetype');
-}
-
-:root {
-  --orange: #EE7752 ;
-  --pink: #E73C7E ;
-  --blue: #23A6D5 ;
-  --coral: #23D5AB ;
-  --purple: #551A8B;
-}
-
-body {
-  font-family: 'VT323', 'Droid Sans', sans-serif;
-}
-
 svg.icon:hover {
   animation: spin infinite 1s linear;
 }
@@ -41,29 +24,27 @@ svg.icon:hover {
 .row1 {
   height: calc(100vh - 50vh);
   color: #fff;
-  /*background: linear-gradient(45deg, rgb(40,90,130), rgb(150,70,110));*/
-  background: linear-gradient(-45deg, var(--orange), var(--pink),var(--blue),var(--coral));
+  background: linear-gradient(-45deg, var(--orange), var(--pink), var(--blue), var(--coral));
   background-size: 400% 400%;
   animation: Gradient 6s ease infinite;
+  flex-direction: row;
+  align-items: center;
 }
 
 .nameHeader {
   font-family: 'GothamUltraItalic';
-  align-self: center;
-  margin-left: 10%;
+  margin: 0 auto;
   font-size: 96px;
-  /*color: rgb(135, 230, 244);*/
   color: var(--purple);
-  /*text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;*/
-   text-shadow:
-    0 0  100px #fff,
-    0 0  10px #fff,
-    0 0  15px #fff,
-    0 0  20px #FFF,
-    0 0  35px #FFF,
-    0 0  40px #FFF,
-    0 0  60px #FFF,
-    0 0  90px #FFF;
+  text-shadow:
+    0 0  100px #FFF,
+    0 0  10px  #FFF,
+    0 0  15px  #FFF,
+    0 0  20px  #FFF,
+    0 0  35px  #FFF,
+    0 0  40px  #FFF,
+    0 0  60px  #FFF,
+    0 0  90px  #FFF;
 }
 
 .iconRow {
@@ -71,6 +52,7 @@ svg.icon:hover {
   flex-direction: column;
   justify-content: space-around;
   margin-right: 10px;
+  height: 100%;
 }
 
 @keyframes Gradient {
@@ -90,6 +72,7 @@ svg.icon:hover {
     flex-direction: row;
     align-self: flex-end;
     width: 100%;
+    height: auto;
     margin-bottom: 10px;
     justify-content: space-between;
   }

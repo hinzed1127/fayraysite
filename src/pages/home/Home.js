@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import './Home.css'; TODO: why is this breaking things?
-// import '../../index.css';
+import './Home.css';
 import Rowbox from '../../components/Rowbox/Rowbox';
 import IconRow from '../../components/IconRow/IconRow';
 

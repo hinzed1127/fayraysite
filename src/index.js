@@ -6,7 +6,6 @@ import history from './history';
 import router from './router';
 import {routes} from './constants/routes';
 import './index.css';
-import './pages/home/Home.css';
 
 WebFont.load({
 	google: {

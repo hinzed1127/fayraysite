@@ -1,5 +1,18 @@
+:root {
+	--orange: #EE7752 ;
+	--pink: #E73C7E ;
+	--blue: #23A6D5 ;
+	--coral: #23D5AB ;
+	--purple: #551A8B;
+}
+
+@font-face {
+	font-family: 'GothamUltraItalic';
+	src: url('./fonts/GothamUltraItalic.ttf') format('truetype');
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'VT323', 'Droid Sans', sans-serif;
 }
