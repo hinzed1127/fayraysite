@@ -18,8 +18,8 @@ class App extends Component {
         </div>
         <div className='row row3'>
           <Rowbox text='Plays shows' number='3'/>
-          <Rowbox text='Takes photos' number='4'/>
-          <Rowbox text='Uses email' number='5'/>
+          <Rowbox text='Takes photos' number='5'/>
+          <Rowbox text='Uses email' number='4'/>
         </div>
       </main>
     );
