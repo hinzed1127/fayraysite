@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from './Icon';
-import {ICONS} from '../constants/Icons';
+import Icon from '../Icon/Icon';
+import {ICONS} from '../../constants/Icons';
 
 export default function IconRow() {
 	return (

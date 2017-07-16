@@ -1,16 +1,16 @@
-.btn {
-  background: none;
-  letter-spacing: inherit;
-  text-transform: inherit;
-  transition: color 1s;
-  font-size: 48px;
+a {
+  text-decoration: none;
   color: #000;
+  font-size: 48px;
+
 }
 
-.btn:hover {
+.btn:hover a {
   text-shadow:
     1px 0 #000, 0 1px #000, -1px 0 #000, 0 -1px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000,
     2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
+  transition: color 1s;
+  color:  #FFF;
 }
 
 .btn-1 {
@@ -18,13 +18,13 @@
 }
 
 .btn-1:hover {
-animation: halftone .3s infinite;
-animation-timing-function: linear;
-background:
-  radial-gradient(ellipse, var(--purple) 0.2em, var(--orange) 0.25em);
-color: var(--blue);
-/* we gave 2 backgrounds, so need to give 2 dimensions below */
-background-size: 1em 1em;
+  animation: halftone .3s infinite;
+  animation-timing-function: linear;
+  background:
+    radial-gradient(ellipse, var(--purple) 0.2em, var(--orange) 0.25em);
+  /* we gave 2 backgrounds, so need to give 2 dimensions below */
+  background-size: 1em 1em;
+  color:  var(--blue);
 }
 
 @keyframes halftone {

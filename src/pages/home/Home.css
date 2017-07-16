@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'GothamUltraItalic';
-  src: url('./fonts/GothamUltraItalic.ttf') format('truetype');
+  src: url('../../fonts/GothamUltraItalic.ttf') format('truetype');
 }
 
 :root {
