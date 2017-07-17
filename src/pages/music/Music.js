@@ -3,7 +3,7 @@ import './music.css';
 
 export default function Music() {
 	return (
-		<div>
+		<div className='music-container'>
 			<img
 				src='http://via.placeholder.com/600x600'
 				alt='Artwork for the Single "Stuck"'

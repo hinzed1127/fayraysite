@@ -18,8 +18,8 @@ a {
 }
 
 .btn-1:hover {
-  animation: halftone .3s infinite;
-  animation-timing-function: linear;
+  animation: halftone 1.75s infinite linear;
+  /* animation-timing-function: linear; */
   background:
     radial-gradient(ellipse, var(--purple) 0.2em, var(--orange) 0.25em);
   /* we gave 2 backgrounds, so need to give 2 dimensions below */
@@ -29,10 +29,10 @@ a {
 
 @keyframes halftone {
   from {
-    background-position: 0 0;
+    background-position: 10em 3.5em;
   }
   to{
-    background-position: -3em -3em;
+    background-position: -10em -3.5em;
   }
 }
 
