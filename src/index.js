@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import WebFont from 'webfontloader';
 
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 import history from './history';
 import router from './router';
 import {routes} from './constants/routes';
@@ -28,4 +28,4 @@ function render(location) {
 render(history.location);
 history.listen(render);
 
-registerServiceWorker();
+// registerServiceWorker();
