@@ -7,9 +7,9 @@
 .joe {
 	position:  absolute;
 	animation:
-		moveX 2s linear 0s infinite alternate,
+		moveJoeX 2s linear 0s infinite alternate,
 		/* 0s specifies the amount of delay before repeating */
-		moveY 4s linear 0s infinite alternate;
+		moveJoeY 4s linear 0s infinite alternate;
 }
 
 .joe img {
@@ -17,7 +17,7 @@
 	height: 373px;
 }
 
-@keyframes moveX {
+@keyframes moveJoeX {
 	from {
 		left: 0;
 	}
@@ -26,11 +26,41 @@
 	}
 }
 
-@keyframes moveY {
+@keyframes moveJoeY {
 	from {
 		top: 0;
 	}
 	to {
 		top: calc(100vh - 373px);
+	}
+}
+
+.erik {
+	position: absolute;
+	animation:
+		moveErikX 4s linear 0s infinite alternate,
+		moveErikY 2s linear 0s infinite alternate;
+}
+
+.erik img {
+	width:  200px;
+	height: 308px;
+}
+
+@keyframes moveErikX {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100vw - 200px);
+	}
+}
+
+@keyframes moveErikY {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(100vh - 308px);
 	}
 }
