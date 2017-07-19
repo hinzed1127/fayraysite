@@ -1,0 +1,36 @@
+.murl {
+	background:  url('../../img/murl_in_space.jpg');
+	height:  100vh;
+	background-size: cover;
+}
+
+.joe {
+	position:  absolute;
+	animation:
+		moveX 2s linear 0s infinite alternate,
+		/* 0s specifies the amount of delay before repeating */
+		moveY 4s linear 0s infinite alternate;
+}
+
+.joe img {
+	width: 350px;
+	height: 373px;
+}
+
+@keyframes moveX {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100vw - 350px);
+	}
+}
+
+@keyframes moveY {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(100vh - 373px);
+	}
+}

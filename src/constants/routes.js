@@ -5,6 +5,7 @@ import Home from '../pages/home/Home';
 import Music from '../pages/music/Music';
 import Photos from '../pages/photos/Photos';
 import Shows from '../pages/shows/Shows';
+import Murl from '../pages/murl/Murl';
 
 export const routes = [
 	{
@@ -30,5 +31,9 @@ export const routes = [
 	{
 		path: '/shows',
 		action: () => <Shows />
+	},
+	{
+		path: '/murl',
+		action: () => <Murl />
 	}
 ];
