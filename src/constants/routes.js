@@ -5,7 +5,7 @@ import Home from '../pages/home/Home';
 import Music from '../pages/music/Music';
 import Photos from '../pages/photos/Photos';
 import Shows from '../pages/shows/Shows';
-import Murl from '../pages/murl/Murl';
+import Space from '../pages/space/Space';
 
 export const routes = [
 	{
@@ -14,7 +14,8 @@ export const routes = [
 	},
 	{
 		path: '/bio',
-		action: () => <Bio />
+		// action: () => <Bio />
+		action: () => <Space />
 	},
 	{
 		path: '/contact',
@@ -33,7 +34,7 @@ export const routes = [
 		action: () => <Shows />
 	},
 	{
-		path: '/murl',
-		action: () => <Murl />
+		path: '/space',
+		action: () => <Space />
 	}
 ];

@@ -1,0 +1,284 @@
+.joe, .erik, .dan,
+.rob, .noah, .murl, .tom {
+	position:  absolute;
+}
+
+.space {
+	background:  url('../../img/stars1.png');
+	height:  100vh;
+	background-size: cover;
+
+	--joeX: 350px;
+	--joeY: 373px;
+	--erikX: 200px;
+	--erikY: 308px;
+	--danX: 280px;
+	--danY: 333px;
+	--robX: 220px;
+	--robY: 325px;
+	--noahX: 195px;
+	--noahY: 327px;
+	--murlX: 287px;
+	--murlY: 285px;
+	--tomX: 175px;
+	--tomY: 243px;
+}
+
+.space .nameHeader {
+	position: absolute;
+	left: 35vw;
+	top: 50vh;
+	z-index: 1;
+	animation: grow 1s infinite ease alternate;
+}
+
+@keyframes grow {
+	from {
+		transform:  scale(0.5);
+	}
+	to {
+		/* transform: scale(1.5); */
+	}
+}
+
+.joe img {
+	width: var(--joeX);
+	height: var(--joeY);
+}
+
+.erik img {
+	width:  var(--erikX);
+	height: var(--erikY);
+}
+
+.dan img {
+	width: var(--danX);
+	height: var(--danY);
+}
+
+.rob img {
+	width: var(--robX);
+	height: var(--robY);
+}
+
+.noah img {
+	width: var(--noahX);
+	height: var(--noahY);
+}
+
+.murl img {
+	width: var(--murlX);
+	height: var(--murlY);
+}
+
+.tom img {
+	width: var(--tomX);
+	height: var(--tomY);
+}
+
+.joe {
+	animation:
+		moveJoeX 5s linear 0s infinite alternate,
+		moveJoeY 7s linear 0s infinite alternate;
+		/* 0s specifies the amount of delay before repeating */
+}
+
+.erik {
+	animation:
+		moveErikX 7s linear 0s infinite alternate,
+		moveErikY 5s linear 0s infinite alternate;
+	left: calc(100vw - var(--erikX));
+}
+
+.dan {
+	top: calc(100vh - var(--danY));
+	animation:
+		moveDanX 7s linear 0s infinite alternate,
+		moveDanY 5s linear 0s infinite alternate;
+}
+
+.rob {
+	top: calc(100vh - var(--robY));
+	left: calc(100vw - var(--robX));
+	animation:
+		moveRobX 7s linear 0s infinite alternate,
+		moveRobY 5s linear 0s infinite alternate;
+}
+
+.noah {
+	left: calc(50vw - var(--noahX));
+	animation:
+		moveNoahX 7s linear 0s infinite,
+		moveNoahY 5s linear 0s infinite alternate;
+}
+
+.murl {
+	top: calc(75vh - var(--murlY));
+	left: calc(75vw - var(--murlX));
+	animation:
+		moveMurlX 7s linear 0s infinite,
+		moveMurlY 5s linear 0s infinite;
+}
+
+.tom {
+	top: calc(100vh - var(--tomY));
+	left: calc(50vw - var(--tomX));
+	animation:
+		moveTomX 7s linear 0s infinite,
+		moveTomY 5s linear 0s infinite alternate;
+}
+
+.person:hover {
+	animation-play-state: paused;
+}
+
+@keyframes moveJoeX {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100vw - var(--joeX));
+	}
+}
+
+@keyframes moveJoeY {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(100vh - var(--joeY));
+	}
+}
+
+
+@keyframes moveErikX {
+	from {
+		left: calc(100vw - var(--erikX));
+	}
+	to {
+		left: 0;
+	}
+}
+
+@keyframes moveErikY {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(100vh - var(--erikY));
+	}
+}
+
+@keyframes moveDanX {
+	from {
+		left: 0;
+	}
+	to {
+		left: calc(100vw - var(--danX));
+	}
+}
+
+@keyframes moveDanY {
+	from {
+		top: calc(100vh - var(--danY));
+	}
+	to {
+		top: 0;
+	}
+}
+
+@keyframes moveRobX {
+	from {
+		left: calc(100vw - var(--robX));
+	}
+	to {
+		left: 0;
+	}
+}
+
+@keyframes moveRobY {
+	from {
+		top: calc(100vh - var(--robY));
+	}
+	to {
+		top: 0;
+	}
+}
+
+@keyframes moveNoahX {
+	0% {
+		left: calc(50vw - var(--noahX));
+	}
+	31% {
+		left: calc(100vw - var(--noahX))
+	}
+	80% {
+		left: 0
+	}
+	100% {
+		left: calc(50vw - var(--noahX));
+	}
+}
+
+@keyframes moveNoahY {
+	from {
+		top: 0;
+	}
+	to {
+		top: calc(100vh - var(--noahY));
+	}
+}
+
+@keyframes moveMurlX {
+	0% {
+		left: calc(75vw - var(--murlX));
+	}
+	15% {
+		left: calc(100vw - var(--murlX))
+	}
+	68% {
+		left: 0
+	}
+	100% {
+		left: calc(75vw - var(--murlX));
+	}
+}
+
+@keyframes moveMurlY {
+	0% {
+		top: calc(75vh - var(--murlY));
+	}
+	15% {
+		top: calc(100vh - var(--murlY))
+	}
+	68% {
+		top: 0
+	}
+	100% {
+		top: calc(75vh - var(--murlY));
+	}
+}
+
+@keyframes moveTomX {
+	0% {
+		left: calc(50vw - var(--tomX));
+	}
+	31% {
+		left: calc(100vw - var(--tomX))
+	}
+	80% {
+		left: 0
+	}
+	100% {
+		left: calc(50vw - var(--tomX));
+	}
+}
+
+@keyframes moveTomY {
+	from {
+		top: calc(100vh - var(--tomY));
+	}
+	to {
+		top: 0;
+	}
+}
