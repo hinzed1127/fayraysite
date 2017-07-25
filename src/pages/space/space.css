@@ -5,7 +5,8 @@
 
 .space {
 	background:  url('../../img/stars1.png');
-	height:  100vh;
+	--space-height:  90vh;
+	height:  var(--space-height);
 	background-size: cover;
 
 	--joeX: 350px;
@@ -91,14 +92,14 @@
 }
 
 .dan {
-	top: calc(100vh - var(--danY));
+	top: calc(var(--space-height) - var(--danY));
 	animation:
 		moveDanX 7s linear 0s infinite alternate,
 		moveDanY 5s linear 0s infinite alternate;
 }
 
 .rob {
-	top: calc(100vh - var(--robY));
+	top: calc(var(--space-height) - var(--robY));
 	left: calc(100vw - var(--robX));
 	animation:
 		moveRobX 7s linear 0s infinite alternate,
@@ -121,7 +122,7 @@
 }
 
 .tom {
-	top: calc(100vh - var(--tomY));
+	top: calc(var(--space-height) - var(--tomY));
 	left: calc(50vw - var(--tomX));
 	animation:
 		moveTomX 7s linear 0s infinite,
@@ -146,7 +147,7 @@
 		top: 0;
 	}
 	to {
-		top: calc(100vh - var(--joeY));
+		top: calc(var(--space-height) - var(--joeY));
 	}
 }
 
@@ -165,7 +166,7 @@
 		top: 0;
 	}
 	to {
-		top: calc(100vh - var(--erikY));
+		top: calc(var(--space-height) - var(--erikY));
 	}
 }
 
@@ -180,7 +181,7 @@
 
 @keyframes moveDanY {
 	from {
-		top: calc(100vh - var(--danY));
+		top: calc(var(--space-height) - var(--danY));
 	}
 	to {
 		top: 0;
@@ -198,7 +199,7 @@
 
 @keyframes moveRobY {
 	from {
-		top: calc(100vh - var(--robY));
+		top: calc(var(--space-height) - var(--robY));
 	}
 	to {
 		top: 0;
@@ -225,7 +226,7 @@
 		top: 0;
 	}
 	to {
-		top: calc(100vh - var(--noahY));
+		top: calc(var(--space-height) - var(--noahY));
 	}
 }
 
@@ -249,7 +250,7 @@
 		top: calc(75vh - var(--murlY));
 	}
 	15% {
-		top: calc(100vh - var(--murlY))
+		top: calc(var(--space-height) - var(--murlY))
 	}
 	68% {
 		top: 0
@@ -276,7 +277,7 @@
 
 @keyframes moveTomY {
 	from {
-		top: calc(100vh - var(--tomY));
+		top: calc(var(--space-height) - var(--tomY));
 	}
 	to {
 		top: 0;
