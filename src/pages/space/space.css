@@ -4,7 +4,7 @@
 }
 
 .space {
-	background:  url('../../img/stars1.png');
+	background:  url('../../img/space/stars1.png');
 	--space-height:  90vh;
 	height:  var(--space-height);
 	background-size: cover;

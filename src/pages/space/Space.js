@@ -1,12 +1,12 @@
 import React from 'react';
 import './space.css';
-import Joe from '../../img/surfing_joe.png';
-import Erik from '../../img/opland_kitty.png';
-import Dan from '../../img/dan_scamp.png';
-import Rob from '../../img/rob2.png';
-import Noah from '../../img/triangle_face.png';
-import Murl from '../../img/murl_in_space2.png';
-import Tom from '../../img/tom.png';
+import Joe from '../../img/space/surfing_joe.png';
+import Erik from '../../img/space/opland_kitty.png';
+import Dan from '../../img/space/dan_scamp.png';
+import Rob from '../../img/space/rob2.png';
+import Noah from '../../img/space/triangle_face.png';
+import Murl from '../../img/space/murl_in_space2.png';
+import Tom from '../../img/space/tom.png';
 
 export default function Space() {
 	return (

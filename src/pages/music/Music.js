@@ -1,7 +1,7 @@
 import React from 'react';
 import './music.css';
 // import singleGif from '../../img/single_art.gif'
-import singleArt from '../../img/single_art.jpg';
+import singleArt from '../../img/ep/single_art.jpg';
 
 export default function Music() {
 	return (
