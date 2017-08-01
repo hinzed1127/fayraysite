@@ -1,0 +1,47 @@
+.next-show-header {
+	font-size: 48px;
+	text-align: center;
+}
+
+.shows-container {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.poster-img {
+	max-width: 100%;
+	max-height: 75vh;
+}
+
+.shows-container a {
+	color: #000;
+}
+
+.shows-container .shows-description {
+    font-size: 28px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.shows-container .shows-row {
+	margin-left: 10%;
+}
+
+.we-know {
+	text-decoration: underline;
+}
+
+.we-know:hover {
+	cursor: pointer;
+}
+
+#wowGif {
+	display:  none;
+}
+
+#wowGif.show {
+	display:  block;
+}

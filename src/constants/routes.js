@@ -1,5 +1,5 @@
 import React from 'react';
-import Bio from '../pages/bio/Bio';
+// import Bio from '../pages/bio/Bio';
 import Contact from '../pages/contact/Contact'
 import Home from '../pages/home/Home';
 import Music from '../pages/music/Music';
