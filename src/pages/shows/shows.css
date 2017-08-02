@@ -1,12 +1,19 @@
 .next-show-header {
 	font-size: 48px;
+	color: #FFF;
 	text-align: center;
+
+	text-shadow:
+		1px 0 #000, 0 1px #000, -1px 0 #000, 0 -1px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000,
+		2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
+
 }
 
 .shows-container {
 	padding: 10px;
 	display: flex;
 	justify-content: center;
+
 }
 
 .poster-img {
@@ -15,7 +22,7 @@
 }
 
 .shows-container a {
-	color: #000;
+	color: #FFF;
 }
 
 .shows-container .shows-description {
@@ -38,10 +45,24 @@
 	cursor: pointer;
 }
 
-#wowGif {
+.wow-gif {
+	display:  block;
+	margin: 0 auto;
+	max-width: 350px;
+}
+
+.hide {
 	display:  none;
 }
 
-#wowGif.show {
-	display:  block;
+.gif-container {
+	position: relative;
+	margin-top: 10px;
+	padding-top: 25px;
+}
+
+.close-gif-icon {
+	position: absolute;
+	top: 10px;
+	left: 40px;
 }

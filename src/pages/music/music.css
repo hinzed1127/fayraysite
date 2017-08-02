@@ -1,7 +1,9 @@
 .ep-art {
-	margin-top: 10%;
+	margin-top: 50px;
 	width: 75%;
+	max-width: 850px;
 	height: auto;
+	font-kerning: normal;
 }
 
 .description {

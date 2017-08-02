@@ -1,36 +1,53 @@
+// @flow
 import React from 'react';
 
-export default function Icon(props) {
+type TypeProps = {
+	icon: string[],
+	link?: string,
+	fill?: string
+};
+
+export default function Icon(props: TypeProps) {
 	const styles = {
 		svg: {
 			display: 'inline-block',
 			verticalAlign: 'middle'
 		},
 		path: {
-			fill: '#000'
+			fill: props.fill || '#000'
 		}
 	};
 	const size = 40;
 
-	return (
-		<a href={props.link}>
-			<svg
-				className='icon'
-				style={styles.svg}
-				width={`${size}px`}
-				height={`${size}px`}
-				viewBox='0 0 1024 1024'
-			>
+	const icon = (
+		<svg
+			className='icon'
+			style={styles.svg}
+			width={`${size}px`}
+			height={`${size}px`}
+			viewBox='0 0 1024 1024'
+		>
 
-			{props.icon.map((path, index) => (
-				<path
-					key={index}
-					style={styles.path}
-					d={path}
-				></path>
-			))}
+		{props.icon.map((path, index) => (
+			<path
+				key={index}
+				style={styles.path}
+				d={path}
+			></path>
+		))}
 
-			</svg>
-		</a>
+		</svg>
+
 	);
+
+	if (props.link) {
+		return (
+			<a href={props.link}>
+			 {icon}
+			</a>
+		);
+	} else {
+		return icon;
+
+	}
 }
