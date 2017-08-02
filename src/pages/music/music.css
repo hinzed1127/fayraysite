@@ -1,7 +1,7 @@
 .ep-art {
 	margin-top: 50px;
 	width: 75%;
-	max-width: 850px;
+	max-width: 700px;
 	height: auto;
 	font-kerning: normal;
 }
@@ -12,4 +12,15 @@
 	text-shadow:
 		1px 0 #000, 0 1px #000, -1px 0 #000, 0 -1px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000,
 		2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
+}
+
+@media (max-width: 768px) {
+	.description {
+		width: 75%;
+		margin: 20px auto 0;
+	}
+
+	.music-wrapper .description {
+		line-height: 60px;
+	}
 }

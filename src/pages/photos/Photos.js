@@ -16,9 +16,6 @@ export default function Photos() {
 				</div>
 			</div>
 			<div className='photos-container'>
-				<img src="http://lorempixel.com/400/200" />
-				<img src="http://lorempixel.com/400/200" />
-				<img src="http://lorempixel.com/400/200" />
 			</div>
 		</div>
 	);

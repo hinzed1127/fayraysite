@@ -52,17 +52,44 @@
 }
 
 .hide {
-	display:  none;
+	display: none;
 }
 
 .gif-container {
 	position: relative;
-	margin-top: 10px;
-	padding-top: 25px;
 }
 
 .close-gif-icon {
 	position: absolute;
-	top: 10px;
+	top: -15px;
 	left: 40px;
+}
+
+@media (max-width: 768px) {
+	.shows-container {
+		flex-wrap: wrap;
+	}
+
+	.shows-container .shows-description {
+		font-size: 20px;
+	}
+
+	.shows-container .shows-row {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	.wow-gif {
+		max-width: 180px;
+	}
+
+	.wow-gif {
+		padding: 20px 0;
+	}
+
+	.close-gif-icon {
+		position: absolute;
+		top: 5px;
+		left: 55px;
+	}
 }

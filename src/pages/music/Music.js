@@ -13,7 +13,10 @@ export default function Music() {
 					alt='Artwork for the Single "Stuck"'
 				/>
 				<p className='description'>
-					Check out the single, "Stuck," from our upcoming
+					Single, "Stuck," coming soon.
+					<br></br>
+					Part of our upcoming
+					<br></br>
 					<i> No Love EP</i>
 				</p>
 			</div>
