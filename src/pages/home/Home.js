@@ -30,7 +30,7 @@ class Home extends Component {
             number={'3'}
           />
           <Rowbox
-            text='Takes photos'
+            text='Makes multimedia'
             linkPath='/photos'
             number={'5'}
           />

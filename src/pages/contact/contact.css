@@ -1,0 +1,18 @@
+.contact-container {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
+/*
+Basically what this does is first position the div's
+top left corner at the center of the page
+(using position: fixed; top: 50%; left: 50%).
+
+Then, translate moves it up by 50% of the div's height
+to center it vertically on the page.
+
+Finally, translate also moves the div to the right by 50%
+of it's width to center it horizontally.
+*/
