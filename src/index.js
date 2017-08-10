@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 // import registerServiceWorker from './registerServiceWorker';
@@ -6,6 +7,7 @@ import router from './router';
 import {routes} from './constants/routes';
 import './index.css';
 import WebFont from 'webfontloader';
+import NavBar from './components/NavBar/NavBar';
 
 WebFont.load({
 	google: {
@@ -15,13 +17,20 @@ WebFont.load({
 
 const container = document.getElementById('root');
 
-function renderComponent(component) {
-	ReactDOM.render(component, container);
+function renderComponent(component, location) {
+	const app = (location.pathname === '/') ? component :
+		(	<div>
+				<NavBar />
+				{component}
+			</div>
+		);
+
+	ReactDOM.render(app, container);
 }
 
 function render(location) {
 	router.resolve(routes, location)
-		.then(renderComponent)
+		.then((component) => renderComponent(component, location))
 		.catch((error) => router.resolve(routes, { ...location, error }));
 }
 
