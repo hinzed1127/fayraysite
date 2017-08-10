@@ -144,10 +144,10 @@
 
 @keyframes moveJoeY {
 	from {
-		top: 0;
+		top: 50px;
 	}
 	to {
-		top: calc(var(--space-height) - var(--joeY));
+		top: calc(var(--space-height) + 50px - var(--joeY));
 	}
 }
 
@@ -163,10 +163,10 @@
 
 @keyframes moveErikY {
 	from {
-		top: 0;
+		top: 50px;
 	}
 	to {
-		top: calc(var(--space-height) - var(--erikY));
+		top: calc(var(--space-height) + 50px - var(--erikY));
 	}
 }
 
@@ -181,10 +181,10 @@
 
 @keyframes moveDanY {
 	from {
-		top: calc(var(--space-height) - var(--danY));
+		top: calc(var(--space-height) + 50px - var(--danY));
 	}
 	to {
-		top: 0;
+		top: 50px;
 	}
 }
 
@@ -199,10 +199,10 @@
 
 @keyframes moveRobY {
 	from {
-		top: calc(var(--space-height) - var(--robY));
+		top: calc(var(--space-height) + 50px - var(--robY));
 	}
 	to {
-		top: 0;
+		top: 50px;
 	}
 }
 
@@ -223,10 +223,10 @@
 
 @keyframes moveNoahY {
 	from {
-		top: 0;
+		top: 50px;
 	}
 	to {
-		top: calc(var(--space-height) - var(--noahY));
+		top: calc(var(--space-height) + 50px - var(--noahY));
 	}
 }
 
@@ -250,10 +250,10 @@
 		top: calc(75vh - var(--murlY));
 	}
 	15% {
-		top: calc(var(--space-height) - var(--murlY))
+		top: calc(var(--space-height) + 50px - var(--murlY))
 	}
 	68% {
-		top: 0
+		top: 50px
 	}
 	100% {
 		top: calc(75vh - var(--murlY));
@@ -277,9 +277,9 @@
 
 @keyframes moveTomY {
 	from {
-		top: calc(var(--space-height) - var(--tomY));
+		top: calc(var(--space-height) + 50px - var(--tomY));
 	}
 	to {
-		top: 0;
+		top: 50px;
 	}
 }

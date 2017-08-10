@@ -31,7 +31,7 @@ class Home extends Component {
           />
           <Rowbox
             text='Makes multimedia'
-            linkPath='/photos'
+            linkPath='/media'
             number={'5'}
           />
           <Rowbox

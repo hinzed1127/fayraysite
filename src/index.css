@@ -4,6 +4,12 @@
 	--blue: #23A6D5 ;
 	--coral: #23D5AB ;
 	--purple: #551A8B;
+
+	--complementary-orange: #52EEE6;
+	--complementary-pink: #7DE73C;
+	--complementary-blue: #D55B23;
+	--complementary-coral: #D54423;
+	--complementary-purple: #FFCE2B;
 }
 
 @font-face {

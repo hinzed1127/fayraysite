@@ -1,7 +1,7 @@
 import React from 'react';
 import './multimedia.css'
 
-export default function Photos() {
+export default function Multimedia() {
 	return (
 		<div>
 			<div className='multimedia-container'>

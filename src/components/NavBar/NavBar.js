@@ -22,7 +22,7 @@ export default function NavBar() {
 			/>
 			<Rowbox
 				text='Media'
-				linkPath='/photos'
+				linkPath='/media'
 				number={'5'}
 			/>
 			<Rowbox

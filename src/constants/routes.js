@@ -3,7 +3,7 @@ import React from 'react';
 import Contact from '../pages/contact/Contact'
 import Home from '../pages/home/Home';
 import Music from '../pages/music/Music';
-import Photos from '../pages/photos/Photos';
+import Multimedia from '../pages/multimedia/Multimedia';
 import Shows from '../pages/shows/Shows';
 import Space from '../pages/space/Space';
 
@@ -26,8 +26,8 @@ export const routes = [
 		action: () => <Music />
 	},
 	{
-		path: '/photos',
-		action: () => <Photos />
+		path: '/media',
+		action: () => <Multimedia />
 	},
 	{
 		path: '/shows',
