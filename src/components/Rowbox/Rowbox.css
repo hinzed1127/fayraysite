@@ -2,7 +2,11 @@
   text-decoration: none;
   color: #000;
   font-size: 48px;
+  text-align: center;
+}
 
+.rowbox:hover {
+  cursor: pointer;
 }
 
 .btn:hover a {

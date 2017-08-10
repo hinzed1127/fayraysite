@@ -2,6 +2,7 @@
 import React from 'react';
 import './Rowbox.css';
 import Link from '../../components/Link/Link';
+import history from '../../history';
 
 type TypeProps = {
 	text: string,
@@ -11,7 +12,10 @@ type TypeProps = {
 
 export default function Rowbox(props: TypeProps) {
 	return (
-		<div className={`rowbox btn btn-${props.number}`}>
+		<div
+			className={`rowbox btn btn-${props.number}`}
+			onClick={() => history.push(props.linkPath)}
+		>
 			<Link to={props.linkPath}>
 				{props.text}
 			</Link>
