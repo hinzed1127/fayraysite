@@ -1,3 +1,7 @@
+.bio-container {
+	padding: 0 5px;
+}
+
 .joe, .erik, .dan,
 .rob, .noah, .murl, .tom {
 	position:  absolute;
@@ -5,9 +9,11 @@
 
 .space {
 	background:  url('../../img/space/stars1.png');
-	--space-height:  90vh;
+	--space-height:  80vh;
 	height:  var(--space-height);
 	background-size: cover;
+
+	--navbar-buffer: 56px;
 
 	--joeX: 350px;
 	--joeY: 373px;
@@ -30,15 +36,15 @@
 	left: 35vw;
 	top: 50vh;
 	z-index: 1;
-	animation: grow 1s infinite ease alternate;
+	animation: grow 2s infinite linear alternate;
 }
 
 @keyframes grow {
 	from {
-		transform:  scale(0.5);
+		transform:  scale(0);
 	}
 	to {
-		/* transform: scale(1.5); */
+		transform: scale(0.75);
 	}
 }
 
@@ -118,7 +124,7 @@
 	left: calc(75vw - var(--murlX));
 	animation:
 		moveMurlX 7s linear 0s infinite,
-		moveMurlY 5s linear 0s infinite;
+		moveMurlY 5s linear 0s infinite alternate;
 }
 
 .tom {
@@ -144,10 +150,10 @@
 
 @keyframes moveJoeY {
 	from {
-		top: 50px;
+		top: var(--navbar-buffer);
 	}
 	to {
-		top: calc(var(--space-height) + 50px - var(--joeY));
+		top: calc(var(--space-height) + var(--navbar-buffer) - var(--joeY));
 	}
 }
 
@@ -163,10 +169,10 @@
 
 @keyframes moveErikY {
 	from {
-		top: 50px;
+		top: var(--navbar-buffer);
 	}
 	to {
-		top: calc(var(--space-height) + 50px - var(--erikY));
+		top: calc(var(--space-height) + var(--navbar-buffer) - var(--erikY));
 	}
 }
 
@@ -181,10 +187,10 @@
 
 @keyframes moveDanY {
 	from {
-		top: calc(var(--space-height) + 50px - var(--danY));
+		top: calc(var(--space-height) + var(--navbar-buffer) - var(--danY));
 	}
 	to {
-		top: 50px;
+		top: var(--navbar-buffer);
 	}
 }
 
@@ -199,10 +205,10 @@
 
 @keyframes moveRobY {
 	from {
-		top: calc(var(--space-height) + 50px - var(--robY));
+		top: calc(var(--space-height) + var(--navbar-buffer) - var(--robY));
 	}
 	to {
-		top: 50px;
+		top: var(--navbar-buffer);
 	}
 }
 
@@ -223,10 +229,10 @@
 
 @keyframes moveNoahY {
 	from {
-		top: 50px;
+		top: var(--navbar-buffer);
 	}
 	to {
-		top: calc(var(--space-height) + 50px - var(--noahY));
+		top: calc(var(--space-height) + var(--navbar-buffer) - var(--noahY));
 	}
 }
 
@@ -246,17 +252,11 @@
 }
 
 @keyframes moveMurlY {
-	0% {
-		top: calc(75vh - var(--murlY));
+	from {
+		top: var(--navbar-buffer);
 	}
-	15% {
-		top: calc(var(--space-height) + 50px - var(--murlY))
-	}
-	68% {
-		top: 50px
-	}
-	100% {
-		top: calc(75vh - var(--murlY));
+	to {
+		top: calc(var(--space-height) + var(--navbar-buffer) - var(--murlY));
 	}
 }
 
@@ -277,9 +277,41 @@
 
 @keyframes moveTomY {
 	from {
-		top: calc(var(--space-height) + 50px - var(--tomY));
+		top: calc(var(--space-height) + var(--navbar-buffer) - var(--tomY));
 	}
 	to {
-		top: 50px;
+		top: var(--navbar-buffer);
+	}
+}
+
+@media (max-width: 768px) {
+	.space {
+		--space-height:  65vh;
+		height: var(--space-height);
+		--navbar-buffer: 46px;
+
+		--joeX: 175px;
+		--joeY: 186.5px;
+		--erikX: 100px;
+		--erikY: 154px;
+		--danX: 140px;
+		--danY: 166.5px;
+		--robX: 110px;
+		--robY: 162.5px;
+		--noahX: 97.5px;
+		--noahY: 163.5px;
+		--murlX: 143.5px;
+		--murlY: 142.5px;
+		--tomX: 87.5px;
+		--tomY: 121.5px;
+	}
+
+	.space .nameHeader {
+		position: absolute;
+		left: 15vh;
+		top: 35vh;
+		font-size: 40px;
+		z-index: 1;
+		animation: grow 2s infinite linear alternate;
 	}
 }
