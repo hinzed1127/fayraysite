@@ -22,7 +22,7 @@ svg.icon:hover {
 }
 
 .row1 {
-  height: calc(100vh - 50vh);
+  height: 50vh;
   color: #fff;
   background: linear-gradient(-45deg, var(--orange), var(--pink), var(--blue), var(--coral));
   background-size: 400% 400%;

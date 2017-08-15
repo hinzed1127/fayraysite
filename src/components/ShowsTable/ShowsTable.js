@@ -16,10 +16,16 @@ export default class ShowsTable extends React.Component {
 		const ENDPOINT = `https://rest.bandsintown.com/artists/fayray/events?app_id=music${DATERANGE}`;
 
 		return fetch(ENDPOINT)
-				.then((res) => res.json())
-				.then((data) => data.sort(function (a, b) {
-					return new Date(b.datetime) - new Date(a.datetime)
-				}));
+			.then((res) => res.json())
+			.then((data) => {
+				if (dateRange !== 'future') {
+					return data.sort(function (a, b) {
+						return new Date(b.datetime) - new Date(a.datetime)
+					});
+				} else {
+					return data;
+				}
+			});
 	}
 
 	setDateRange(dateRange) {
