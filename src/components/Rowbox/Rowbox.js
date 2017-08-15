@@ -11,9 +11,14 @@ type TypeProps = {
 };
 
 export default function Rowbox(props: TypeProps) {
+	let classes = `rowbox btn btn-${props.number}`;
+	if (props.linkPath === window.location.pathname) {
+		classes += ' selected';
+	}
+
 	return (
 		<div
-			className={`rowbox btn btn-${props.number}`}
+			className={classes}
 			onClick={() => history.push(props.linkPath)}
 		>
 			<Link to={props.linkPath}>

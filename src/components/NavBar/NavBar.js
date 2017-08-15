@@ -6,6 +6,11 @@ export default function NavBar() {
 	return (
 		<div className='navbar'>
 			<Rowbox
+				text='Home'
+				linkPath='/'
+				number={'6'}
+			/>
+			<Rowbox
 				text='Bio'
 				linkPath='/bio'
 				number={'1'}

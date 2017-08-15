@@ -9,7 +9,8 @@
   cursor: pointer;
 }
 
-.btn:hover a {
+.btn:hover a,
+.selected a {
   text-shadow:
     1px 0 #000, 0 1px #000, -1px 0 #000, 0 -1px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000,
     2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
@@ -68,12 +69,12 @@
 }
 
 .btn-3:hover {
-animation: sawtooth 0.25s infinite linear;
-background:
-  linear-gradient(45deg, var(--coral) 0.5em, transparent 0.5em) 0 0/1em 1em,
-  linear-gradient(-45deg, var(--coral) 0.5em, transparent 0.5em) 0 0/1em 1em;
-color: var(--orange);
-background-color: var(--pink);
+  animation: sawtooth 0.25s infinite linear;
+  background:
+    linear-gradient(45deg, var(--coral) 0.5em, transparent 0.5em) 0 0/1em 1em,
+    linear-gradient(-45deg, var(--coral) 0.5em, transparent 0.5em) 0 0/1em 1em;
+  color: var(--orange);
+  background-color: var(--pink);
 }
 
 @keyframes sawtooth {
@@ -87,15 +88,15 @@ background-color: var(--pink);
 }
 
 .btn-4:hover {
-animation: zigzag .4s linear infinite;
-background:
-  linear-gradient(135deg, var(--pink) 0.25em, transparent 0.25em) -0.5em 0,
-  linear-gradient(225deg, var(--pink) 0.25em, transparent 0.25em) -0.5em 0,
-  linear-gradient(315deg, var(--pink) 0.25em, transparent 0.25em) 0 0,
-  linear-gradient(45deg, var(--pink) 0.25em, transparent 0.25em) 0 0;
-background-size: 0.75em 0.75em;
-background-color: var(--blue);
-color: var(--coral);
+  animation: zigzag .4s linear infinite;
+  background:
+    linear-gradient(135deg, var(--pink) 0.25em, transparent 0.25em) -0.5em 0,
+    linear-gradient(225deg, var(--pink) 0.25em, transparent 0.25em) -0.5em 0,
+    linear-gradient(315deg, var(--pink) 0.25em, transparent 0.25em) 0 0,
+    linear-gradient(45deg, var(--pink) 0.25em, transparent 0.25em) 0 0;
+  background-size: 0.75em 0.75em;
+  background-color: var(--blue);
+  color: var(--coral);
 }
 
 @keyframes zigzag {
@@ -109,12 +110,12 @@ color: var(--coral);
 }
 
 .btn-5:hover {
-animation: blinds .75s linear infinite alternate;
-background:
-  linear-gradient(0deg, var(--purple) 25%, transparent 25%) 0 0/0.5em 0.5em,
-  linear-gradient(0deg, var(--orange) 50%, transparent 50%) 0 0/1em 1em;
-background-color: var(--coral);
-color: var(--pink);
+  animation: blinds .75s linear infinite alternate;
+  background:
+    linear-gradient(0deg, var(--purple) 25%, transparent 25%) 0 0/0.5em 0.5em,
+    linear-gradient(0deg, var(--orange) 50%, transparent 50%) 0 0/1em 1em;
+  background-color: var(--coral);
+  color: var(--pink);
 }
 
 @keyframes blinds {
@@ -125,25 +126,50 @@ color: var(--pink);
 }
 
 .btn-6 {
-  color: #f9879b;
+  background-color: var(--complementary-purple);
 }
 
 .btn-6:hover {
-animation: pulse 1s ease-in infinite;
-background:
-  radial-gradient(circle, rgba(249, 135, 155, 0.25) 43%,
-  rgba(0, 0, 0, 0) 50%) 0 0/1em 1em,
-  radial-gradient(circle, rgba(249, 135, 155, 0.25) 43%,
-  rgba(0, 0, 0, 0) 50%) 0.5em 0.5em/2em 2em;
-color: #0bdcb7;
+  animation: pulse .25s linear infinite;
+  background:
+    radial-gradient(circle, var(--blue) 43%,
+    var(--complementary-pink) 50%) 0 0/1em 1em,
+    radial-gradient(circle, var(--blue) 43%,
+    var(--complementary-pink) 50%) 0.5em 0.5em/2em 2em;
 }
 
 @keyframes pulse {
-  50% {
+/*   50% {
     background-position: 0.66em 0.66em, -0.33em -0.33em;
   }
   100% {
     background-size: 2em 2em, 1em 1em;
     background-position: -1.5em -1.5em, -1em -1em;
+  } */
+  from {
+    background-position: 2em 0;
+  }
+  to {
+    background-size: 2em 2em, 1em 1em;
+    background-position: 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-1:hover,
+  .btn-2:hover,
+  .btn-3:hover,
+  .btn-4:hover,
+  .btn-5:hover,
+  .btn-6:hover {
+    animation:  none;
+    background: none;
+    transition: none;
+  }
+
+  .btn:hover,
+  .selected {
+    background: none;
+    transition: none;
   }
 }
