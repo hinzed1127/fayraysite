@@ -1,0 +1,46 @@
+.table-container {
+	width: 100%;
+}
+
+table,
+.tabs {
+	margin: 0 auto;
+	width: 70%;
+	border-collapse: collapse;
+}
+
+.active {
+	color: var(--complementary-purple);
+}
+
+.tabs:hover {
+	cursor: pointer;
+}
+
+tr {
+	border-top: 2px solid var(--orange);
+}
+
+td,
+th,
+.tabs {
+	padding: 10px;
+}
+
+thead tr {
+	text-align: left;
+	border-top: none;
+
+}
+
+.rsvp-link {
+	padding: 5px;
+	color: inherit;
+	border-radius: 5px;
+	text-decoration: none;
+	border:  2px solid var(--blue);
+}
+
+.rsvp-link:hover {
+	background:  var(--blue);
+}

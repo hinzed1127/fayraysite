@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '../../components/Icon/Icon';
+import ShowsTable from '../../components/ShowsTable/ShowsTable';
 import './shows.css';
 import lhPoster from '../../img/lincoln-hall-show.jpg';
 import {ICONS} from '../../constants/Icons';
@@ -25,6 +26,7 @@ function toggleGif() {
 	}
 }
 
+
 export default function Shows() {
 	const googleMapsLink = 'https://goo.gl/maps/FfZM5KfPnxn'
 	const lhEvent = 'http://www.lh-st.com/Shows/08-19-2017+The+North+41';
@@ -36,7 +38,7 @@ export default function Shows() {
 
 	return (
 		<div>
-			<h1 className='next-show-header'>Next Show:</h1>
+			<h1 className='shows-header'>Next Show:</h1>
 			<div className='shows-container'>
 				<div className='show-poster'>
 					<img className='poster-img' src={lhPoster} alt='Upcoming show at Lincoln Hall, August 19th' />
@@ -74,6 +76,10 @@ export default function Shows() {
 						Tell those folks on <a href={fbEvent}>Facebook</a> you're going, too
 					</div>
 				</div>
+			</div>
+			<div className='shows-table-container'>
+				<h1 className='shows-header'>More Shows:</h1>
+				<ShowsTable />
 			</div>
 		</div>
 	);

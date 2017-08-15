@@ -1,4 +1,4 @@
-.next-show-header {
+.shows-header {
 	font-size: 48px;
 	color: #FFF;
 	text-align: center;
@@ -23,6 +23,10 @@
 
 .shows-container a {
 	color: #FFF;
+}
+
+.shows-table-container {
+	padding-bottom: 20px;
 }
 
 .shows-container .shows-description {
@@ -75,7 +79,7 @@
 	}
 
 	.shows-container .shows-row {
-		margin: 0 auto;
+		margin: 15px auto;
 		width: 90%;
 	}
 
