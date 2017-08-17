@@ -13,11 +13,12 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "flow-bin": "^0.50.0"
+    "flow-bin": "^0.50.0",
+    "react-snapshot": "^2.0.0-1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow"

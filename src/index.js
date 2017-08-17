@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-snapshot';
 import 'babel-polyfill';
 
 // import registerServiceWorker from './registerServiceWorker';
@@ -26,16 +26,16 @@ function renderComponent(component, location) {
 			</div>
 		);
 
-	ReactDOM.render(app, container);
+	render(app, container);
 }
 
-function render(location) {
+function renderRoute(location) {
 	router.resolve(routes, location)
 		.then((component) => renderComponent(component, location))
 		.catch((error) => router.resolve(routes, { ...location, error }));
 }
 
-render(history.location);
+renderRoute(history.location);
 history.listen(render);
 
 // registerServiceWorker();
