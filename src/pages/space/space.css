@@ -2,6 +2,12 @@
 	padding: 0 5px;
 }
 
+.bio-container .bio,
+.bio-container .members {
+	padding: 0 10px;
+	text-align: center;
+}
+
 .joe, .erik, .dan,
 .rob, .noah, .murl, .tom {
 	position:  absolute;
@@ -9,7 +15,7 @@
 
 .space {
 	background:  url('../../img/space/stars1.png');
-	--space-height:  80vh;
+	--space-height:  75vh;
 	height:  var(--space-height);
 	background-size: cover;
 
@@ -313,5 +319,10 @@
 		font-size: 40px;
 		z-index: 1;
 		animation: grow 2s infinite linear alternate;
+	}
+
+	.bio-container .bio,
+	.bio-container .members {
+		text-align: justify;
 	}
 }

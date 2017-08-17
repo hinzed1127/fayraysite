@@ -42,7 +42,7 @@ export default function Icon(props: TypeProps) {
 
 	if (props.link) {
 		return (
-			<a href={props.link}>
+			<a href={props.link} target='_blank'>
 			 {icon}
 			</a>
 		);

@@ -37,9 +37,13 @@ export default function Space() {
 			</div>
 
 			<div className='bio-container'>
-				<p>Fay Ray is a band from Chicago that plays a weird amalgamation of genres and just wants to make you dance.</p>
+				<p className='bio'>
+					Fay Ray (FKA Church Booty) is a band from Chicago that plays a weird amalgamation of genres and just wants to make you dance.
+					With high-energy performances that highlight their musical versatility and strong chemistry,
+					the group balances songs that have all the catchiness of pop, all the grooves of funk and R&B, and harmonies and improvisations equally at home in jazz.
+				</p>
 
-				<p>Fay Ray is Mariel, Dan, Joe, Tom, Erik, Noah, Rob, and Byron.</p>
+				<p className='members'>Fay Ray is Mariel, Dan, Joe, Tom, Erik, Noah, Rob, and Byron.</p>
 			</div>
 		</div>
 	);
