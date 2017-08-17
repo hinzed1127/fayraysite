@@ -1,8 +1,7 @@
 // @flow
 import React from 'react';
 import './Rowbox.css';
-import Link from '../../components/Link/Link';
-import history from '../../history';
+import {Link} from 'react-router-dom';
 
 type TypeProps = {
 	text: string,
@@ -15,13 +14,17 @@ export default function Rowbox(props: TypeProps) {
 	if (props.linkPath === window.location.pathname) {
 		classes += ' selected';
 	}
+	const linkStyles = {
+		width: '100%',
+		height: '100%',
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center'
+	};
 
 	return (
-		<div
-			className={classes}
-			onClick={() => history.push(props.linkPath)}
-		>
-			<Link to={props.linkPath}>
+		<div className={classes}>
+			<Link style={linkStyles} to={props.linkPath}>
 				{props.text}
 			</Link>
 		</div>

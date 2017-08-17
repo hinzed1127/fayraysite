@@ -5,18 +5,20 @@
   "private": true,
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "history": "^4.6.3",
     "path-to-regexp": "^1.7.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.10",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "flow-bin": "^0.50.0",
-    "react-snapshot": "^2.0.0-1"
+    "react-snapshot": "^2.0.0-1",
+    "source-map-explorer": "^1.4.0"
   },
   "scripts": {
+    "analyze": "source-map-explorer build/static/js/main.*",
     "start": "react-scripts start",
     "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test --env=jsdom",

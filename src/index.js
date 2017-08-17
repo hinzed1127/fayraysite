@@ -1,14 +1,18 @@
 import React from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {render} from 'react-snapshot';
-import 'babel-polyfill';
-
-// import registerServiceWorker from './registerServiceWorker';
-import history from './history';
-import router from './router';
-import {routes} from './constants/routes';
+import Contact from './pages/contact/Contact'
+import Home from './pages/home/Home';
+import Music from './pages/music/Music';
+import Multimedia from './pages/multimedia/Multimedia';
+import Shows from './pages/shows/Shows';
+import Space from './pages/space/Space';
+import NavBar from './components/NavBar/NavBar';
 import './index.css';
 import WebFont from 'webfontloader';
-import NavBar from './components/NavBar/NavBar';
+import 'babel-polyfill';
+// import registerServiceWorker from './registerServiceWorker';
+
 
 WebFont.load({
 	google: {
@@ -16,26 +20,19 @@ WebFont.load({
 	}
 });
 
-const container = document.getElementById('root');
-
-function renderComponent(component, location) {
-	const app = (location.pathname === '/') ? component :
-		(	<div>
-				<NavBar />
-				{component}
-			</div>
-		);
-
-	render(app, container);
-}
-
-function renderRoute(location) {
-	router.resolve(routes, location)
-		.then((component) => renderComponent(component, location))
-		.catch((error) => router.resolve(routes, { ...location, error }));
-}
-
-renderRoute(history.location);
-history.listen(render);
+render(
+	<Router>
+		<div>
+			<Route exact path='/' component={Home} />
+			<Route path="/(bio|contact|music|media|shows)/" component={NavBar} />
+			<Route path='/bio' component={Space} />
+			<Route path='/contact' component={Contact} />
+			<Route path='/music' component={Music} />
+			<Route path='/media' component={Multimedia} />
+			<Route path='/shows' component={Shows} />
+		</div>
+	</Router>,
+	document.getElementById('root')
+);
 
 // registerServiceWorker();
