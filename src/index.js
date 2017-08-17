@@ -9,16 +9,8 @@ import Shows from './pages/shows/Shows';
 import Space from './pages/space/Space';
 import NavBar from './components/NavBar/NavBar';
 import './index.css';
-import WebFont from 'webfontloader';
 import 'babel-polyfill';
 // import registerServiceWorker from './registerServiceWorker';
-
-
-WebFont.load({
-	google: {
-		families: ['VT323','Droid Sans', 'sans-serif']
-	}
-});
 
 render(
 	<Router>
