@@ -5,7 +5,8 @@
 .bio-container .bio,
 .bio-container .members {
 	padding: 0 10px;
-	text-align: center;
+	text-align: justify;
+	text-align-last: center;
 }
 
 .joe, .erik, .dan,
@@ -319,10 +320,5 @@
 		font-size: 40px;
 		z-index: 1;
 		animation: grow 2s infinite linear alternate;
-	}
-
-	.bio-container .bio,
-	.bio-container .members {
-		text-align: justify;
 	}
 }
