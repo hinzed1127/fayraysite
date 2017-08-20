@@ -1,31 +1,6 @@
 import React from 'react';
-import Icon from '../../components/Icon/Icon';
 import ShowsTable from '../../components/ShowsTable/ShowsTable';
 import './shows.css';
-import lhPoster from '../../img/lincoln-hall-show.jpg';
-import {ICONS} from '../../constants/Icons';
-
-
-let gifIsOpen = false;
-
-function toggleGif() {
-	const weKnow = document.querySelector('.we-know');
-	const closeGifIcon = document.querySelector('.close-gif-icon');
-	const gif = document.querySelector('.wow-gif');
-
-	gifIsOpen = !gifIsOpen;
-
-	if (gifIsOpen) {
-		weKnow.className = weKnow.className.concat(' hide');
-		closeGifIcon.className = closeGifIcon.className.replace(' hide', '');
-		gif.className = gif.className.replace(' hide', '');
-	} else {
-		weKnow.className = weKnow.className.replace(' hide', '');
-		closeGifIcon.className = closeGifIcon.className.concat(' hide');
-		gif.className = gif.className.concat(' hide');
-	}
-}
-
 
 export default function Shows() {
 	const googleMapsLink = 'https://goo.gl/maps/FQRtpM4hKv92';
@@ -37,6 +12,7 @@ export default function Shows() {
 			<div className='shows-container'>
 				<div className='show-poster'>
 					<div 
+						id='i_frame'
 						className='fb-video' 
 						data-href='https://www.facebook.com/crofton.coleman/videos/1309759969123037/'
 						data-width='500' 
