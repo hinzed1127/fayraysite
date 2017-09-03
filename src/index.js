@@ -14,7 +14,7 @@ import 'babel-polyfill';
 
 render(
 	<Router>
-		<div>
+		<div className='router-container'>
 			<Route exact path='/' component={Home} />
 			<Route path="/(bio|contact|music|media|shows)/" component={NavBar} />
 			<Route path='/bio' component={Space} />

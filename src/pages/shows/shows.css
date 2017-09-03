@@ -9,6 +9,13 @@
 
 }
 
+.banner-image {
+	width: 100%;
+	height: auto;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
 h2.shows-header  {
 	font-size:  36px;
 }
@@ -30,7 +37,11 @@ h2.shows-header  {
 }
 
 .shows-table-container {
-	padding-bottom: 20px;
+	padding: 30px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 .shows-container .shows-description {
@@ -74,6 +85,10 @@ h2.shows-header  {
 }
 
 @media (max-width: 768px) {
+	.shows-table-container {
+		justify-content: center;
+	}
+
 	.shows-container {
 		flex-wrap: wrap;
 	}
