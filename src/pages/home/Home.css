@@ -31,6 +31,19 @@ svg.icon:hover {
   align-items: center;
 }
 
+.titleContent {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.soundcloudPlayer {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .nameHeader {
   font-family: 'GothamUltraItalic';
   margin: 0 auto;
@@ -46,6 +59,15 @@ svg.icon:hover {
     0 0  60px  #FFF,
     0 0  90px  #FFF;
 }
+
+.nameHeader.subtext {
+  font-size: 28px;
+  text-shadow: 
+    0 0  5px  #FFF,
+    0 0  10px  #FFF,
+    0 0  15px  #FFF,
+    0 0  30px  #FFF;
+  }
 
 .iconRow {
   display: flex;
@@ -95,7 +117,25 @@ svg.icon:hover {
   }
 
   .nameHeader {
-    font-size: 60px;
+    font-size: 35px;
+  }
+
+  .titleContent {
+    height: 40vh;
+  }
+
+  .soundcloudPlayer {
+    max-width: 250px;
+    max-height: 125px;
+    margin: 0 auto;
+  }
+
+  .nameHeader.subtext {
+    font-size: 20px;
+  }
+
+  .nameHeader.subtext.two {
+    display: none;
   }
 
   svg {

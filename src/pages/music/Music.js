@@ -1,7 +1,6 @@
 import React from 'react';
 import './music.css';
-// import singleGif from '../../img/single_art.gif'
-import singleArt from '../../img/ep/single_art.jpg';
+import singleArt from '../../img/ep/ep_art.jpg';
 
 export default function Music() {
 	return (
@@ -13,11 +12,9 @@ export default function Music() {
 					alt='Artwork for the Single "Stuck"'
 				/>
 				<p className='description'>
-					Single, "Stuck," coming soon.
+					<i>No Love EP</i>
 					<br></br>
-					Part of our upcoming
-					<br></br>
-					<i> No Love EP</i>
+					Out Everywhere Oct. 19
 				</p>
 			</div>
 		</div>
