@@ -27,21 +27,28 @@ svg.icon:hover {
   background: linear-gradient(-45deg, var(--orange), var(--pink), var(--blue), var(--coral));
   background-size: 400% 400%;
   animation: Gradient 6s ease infinite;
+}
+
+.row1 .heading {
+  display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .titleContent {
   display: flex;
   flex-direction: column;
   height: 50vh;
-  width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.soundcloudPlayer {
-  max-width: 500px;
-  margin: 0 auto;
+.soundcloudPlayer-container {
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nameHeader {
@@ -61,13 +68,9 @@ svg.icon:hover {
 }
 
 .nameHeader.subtext {
+  margin-top: 30px;
   font-size: 28px;
-  text-shadow: 
-    0 0  5px  #FFF,
-    0 0  10px  #FFF,
-    0 0  15px  #FFF,
-    0 0  30px  #FFF;
-  }
+}
 
 .iconRow {
   display: flex;
@@ -89,6 +92,23 @@ svg.icon:hover {
   }
 }
 
+@media screen and (device-aspect-ratio: 375/667) {
+  /* 375 × 667, iPhone 5*/
+  .soundcloudPlayer-container {
+    max-width: 290px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .nameHeader {
+    font-size: 50px;
+  }
+
+  .soundcloudPlayer-container {
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 768px) {
   .iconRow {
     flex-direction: row;
@@ -103,8 +123,17 @@ svg.icon:hover {
     margin: 0 auto;
   }
 
+  .row1 .heading {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
   .row {
     flex-wrap: wrap;
+  }
+
+  .row1 {
+    height: 50vh;
   }
 
   .row2 {
@@ -117,25 +146,29 @@ svg.icon:hover {
   }
 
   .nameHeader {
-    font-size: 35px;
+    margin-top: 20px;
+    font-size: 30px;
   }
 
   .titleContent {
-    height: 40vh;
-  }
-
-  .soundcloudPlayer {
-    max-width: 250px;
-    max-height: 125px;
+    height: 20vh;
     margin: 0 auto;
   }
 
-  .nameHeader.subtext {
-    font-size: 20px;
+
+  .soundcloudPlayer-container {
+    max-width: 450px;
+    max-height: 100px;
+    margin: 0 auto;
   }
 
-  .nameHeader.subtext.two {
-    display: none;
+  .soundcloudPlayer-container iframe {
+    max-height: 150px;
+    max-width: 450px;
+  }
+
+  .nameHeader.subtext {
+    font-size: 18px;
   }
 
   svg {

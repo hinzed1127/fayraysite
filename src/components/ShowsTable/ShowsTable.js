@@ -48,6 +48,54 @@ export default class ShowsTable extends React.Component {
 		});
 	}
 
+	renderTable = () => {
+		if (this.state.shows.length === 0) {
+			return (
+				<div className='shows-empty-state'>
+					No upcoming shows
+				</div>
+			);
+		} else {
+			return (
+				<table>
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th className='day'></th>
+							<th>Venue</th>
+							<th>Location</th>
+							{this.state.future &&
+								<th className='more'></th>
+							}
+						</tr>
+					</thead>
+					<tbody>
+						{
+							this.state.shows.map((show, index) => {
+							    const date = new Date(show.datetime);
+								return (
+									<tr key={index}>
+										<td>{`${MONTHS[date.getMonth()]} ${date.getDate()}`}</td>
+										<td>{`${DAYS[date.getDay()]}`}</td>
+										<td>{show.venue.name}</td>
+										<td>{`${show.venue.city}, ${show.venue.region}`}</td>
+										{this.state.future &&
+											<td>
+												<a href={show.url} className='rsvp-link'>
+													RSVP
+												</a>
+											</td>
+										}
+									</tr>
+								);
+							})
+						}
+					</tbody>
+				</table>
+			);
+		}
+	};
+
 	render() {
 
 		if (this.state.shows === null) {
@@ -62,41 +110,7 @@ export default class ShowsTable extends React.Component {
 						<span> | </span>
 						<span className={!this.state.future ? 'tab-option active' : 'tab-option'} onClick={() => this.setDateRange('past')}>Past Shows</span>
 					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>Date</th>
-								<th className='day'></th>
-								<th>Venue</th>
-								<th>Location</th>
-								{this.state.future &&
-									<th className='more'></th>
-								}
-							</tr>
-						</thead>
-						<tbody>
-							{
-								this.state.shows.map((show, index) => {
-								    const date = new Date(show.datetime);
-									return (
-										<tr key={index}>
-											<td>{`${MONTHS[date.getMonth()]} ${date.getDate()}`}</td>
-											<td>{`${DAYS[date.getDay()]}`}</td>
-											<td>{show.venue.name}</td>
-											<td>{`${show.venue.city}, ${show.venue.region}`}</td>
-											{this.state.future &&
-												<td>
-													<a href={show.url} className='rsvp-link'>
-														RSVP
-													</a>
-												</td>
-											}
-										</tr>
-									);
-								})
-							}
-						</tbody>
-					</table>
+						{this.renderTable()}
 				</div>
 			);
 		}

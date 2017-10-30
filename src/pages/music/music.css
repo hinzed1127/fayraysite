@@ -14,13 +14,35 @@
 		2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
 }
 
+.no-love-link-button {
+	margin: 5px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 200px;
+	height: 40px;
+	border: 2px solid var(--blue);
+	background: var(--coral);
+	border-radius: 10px;
+}
+
+.no-love-link-button:hover {
+	background: var(--pink);
+}
+
+.no-love-link-button a {
+	text-decoration: none;
+	color: #FFF;
+}
+
 @media (max-width: 768px) {
 	.description {
 		width: 75%;
-		margin: 20px auto 0;
+		margin: 0 auto;
 	}
 
 	.music-wrapper .description {
 		line-height: 60px;
 	}
 }
+
