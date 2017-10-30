@@ -37,6 +37,7 @@ svg.icon:hover {
 }
 
 .titleContent {
+  text-align: center;
   display: flex;
   flex-direction: column;
   height: 50vh;
@@ -157,14 +158,14 @@ svg.icon:hover {
 
 
   .soundcloudPlayer-container {
-    max-width: 450px;
+    max-width: 300px;
     max-height: 100px;
     margin: 0 auto;
   }
 
   .soundcloudPlayer-container iframe {
-    max-height: 150px;
-    max-width: 450px;
+    max-width: 300px;
+    max-height: 100px;
   }
 
   .nameHeader.subtext {
