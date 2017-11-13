@@ -9,6 +9,10 @@
 	text-align-last: center;
 }
 
+.person {
+	position: relative;
+}
+
 .joe, .erik, .dan,
 .rob, .noah, .murl, .tom {
 	position:  absolute;
@@ -20,7 +24,7 @@
 	height:  var(--space-height);
 	background-size: cover;
 
-	--navbar-buffer: 56px;
+	--navbar-buffer: 0px;
 
 	--joeX: 350px;
 	--joeY: 373px;
@@ -55,63 +59,74 @@
 	}
 }
 
-.joe img {
+.joe img,
+.joe + .description {
 	width: var(--joeX);
 	height: var(--joeY);
 }
 
-.erik img {
+.erik img,
+.erik + .description {
 	width:  var(--erikX);
 	height: var(--erikY);
 }
 
-.dan img {
+.dan img,
+.dan + .description {
 	width: var(--danX);
 	height: var(--danY);
 }
 
-.rob img {
+.rob img,
+.rob + .description {
 	width: var(--robX);
 	height: var(--robY);
 }
 
-.noah img {
+.noah img,
+.noah + .description {
 	width: var(--noahX);
 	height: var(--noahY);
 }
 
-.murl img {
+.murl img,
+.murl + .description {
 	width: var(--murlX);
 	height: var(--murlY);
 }
 
-.tom img {
+.tom img,
+.tom + .description {
 	width: var(--tomX);
 	height: var(--tomY);
 }
 
-.joe {
+.joe,
+.joe + .description {
 	animation:
 		moveJoeX 5s linear 0s infinite alternate,
 		moveJoeY 7s linear 0s infinite alternate;
 		/* 0s specifies the amount of delay before repeating */
 }
 
-.erik {
+.erik,
+.erik + .description {
 	animation:
 		moveErikX 7s linear 0s infinite alternate,
 		moveErikY 5s linear 0s infinite alternate;
 	left: calc(100vw - var(--erikX));
 }
 
-.dan {
+.dan,
+.dan + .description {
 	top: calc(var(--space-height) - var(--danY));
 	animation:
 		moveDanX 7s linear 0s infinite alternate,
 		moveDanY 5s linear 0s infinite alternate;
 }
 
-.rob {
+.rob,
+.rob + .description {
 	top: calc(var(--space-height) - var(--robY));
 	left: calc(100vw - var(--robX));
 	animation:
@@ -119,14 +134,16 @@
 		moveRobY 5s linear 0s infinite alternate;
 }
 
-.noah {
+.noah,
+.noah + .description {
 	left: calc(50vw - var(--noahX));
 	animation:
 		moveNoahX 7s linear 0s infinite,
 		moveNoahY 5s linear 0s infinite alternate;
 }
 
-.murl {
+.murl,
+.murl + .description {
 	top: calc(75vh - var(--murlY));
 	left: calc(75vw - var(--murlX));
 	animation:
@@ -134,7 +151,8 @@
 		moveMurlY 5s linear 0s infinite alternate;
 }
 
-.tom {
+.tom,
+.tom + .description {
 	top: calc(var(--space-height) - var(--tomY));
 	left: calc(50vw - var(--tomX));
 	animation:
@@ -142,9 +160,56 @@
 		moveTomY 5s linear 0s infinite alternate;
 }
 
-.person:hover {
+.person:hover .joe,
+.person:hover .erik,
+.person:hover .dan,
+.person:hover .rob,
+.person:hover .noah,
+.person:hover .murl,
+.person:hover .tom,
+.person:hover .description{
 	animation-play-state: paused;
+	opacity: .75;
 }
+
+.person .description {
+	position: absolute;
+	font-size: 30px;
+	text-align: center;
+	visibility: hidden;
+}
+
+.person:hover .description {
+	opacity: 1;
+	visibility: visible;
+}
+
+.person .description-text {
+	margin-top: 40%;
+}
+
+.dan + .description .description-text {
+	margin-left: 35px;
+}
+
+.noah + .description .description-text {
+	margin-top: 50%;
+	margin-right: 45px;
+}
+
+.tom + .description .description-text {
+	margin-top: 55%;
+	margin-left: 10px;
+}
+
+.joe + .description .description-text {
+	margin-top: 30%;
+}
+
+.murl + .description .description-text {
+	margin-right: 15px;
+}
+
 
 @keyframes moveJoeX {
 	from {

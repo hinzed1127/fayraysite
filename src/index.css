@@ -48,7 +48,8 @@ body {
 .contact-container,
 .music-container,
 .shows-container,
-.shows-table-container {
+.shows-table-container,
+.person {
 
 	font-size: 24px;
 	color:  #FFF;
