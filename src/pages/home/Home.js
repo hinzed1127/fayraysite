@@ -39,7 +39,7 @@ class Home extends Component {
             number={'1'}
           />
           <Rowbox
-            text='Has a new EP'
+            text='Records music'
             linkPath='/music'
             number={'2'}
           />

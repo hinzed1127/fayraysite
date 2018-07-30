@@ -1,7 +1,7 @@
 .ep-art {
 	margin-top: 50px;
 	width: 65%;
-	max-width: 700px;
+	max-width: 500px;
 	height: auto;
 	font-kerning: normal;
 }
@@ -15,7 +15,8 @@
 }
 
 .no-love-link-button {
-	margin: 5px auto;
+	padding: 8px;
+	margin: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -35,6 +36,17 @@
 	color: #FFF;
 }
 
+.links-and-content .links {
+	display: flex;
+}
+
+.music-container > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 @media (max-width: 768px) {
 	.description {
 		width: 75%;
@@ -43,6 +55,17 @@
 
 	.music-wrapper .description {
 		line-height: 60px;
+	}
+
+	.no-love-link-button {
+		width: 150px;
+		margin: 5px;
+	}
+}
+
+@media (max-width: 320px) {
+	.no-love-link-button {
+		width: 100px;
 	}
 }
 
