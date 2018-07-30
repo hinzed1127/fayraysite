@@ -2,7 +2,6 @@ import React from 'react';
 import './space.css';
 import Joe from '../../img/space/surfing_joe.png';
 import Erik from '../../img/space/opland_kitty.png';
-import Dan from '../../img/space/dan_scamp.png';
 import Rob from '../../img/space/rob2.png';
 import Noah from '../../img/space/triangle_face.png';
 import Murl from '../../img/space/murl_in_space2.png';
@@ -32,17 +31,6 @@ export default function Space() {
 						<div className='description-text'>
 							<div>Erik</div>
 							<div>Bass</div>
-						</div>
-					</div>
-				</div>
-				<div className='person'>
-					<div className='dan'>
-						<img src={Dan} alt='Dan' />
-					</div>
-					<div className='description'>
-						<div className='description-text'>
-							<div>Dan</div>
-							<div>Saxes</div>
 						</div>
 					</div>
 				</div>

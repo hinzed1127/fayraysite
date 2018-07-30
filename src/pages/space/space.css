@@ -13,8 +13,8 @@
 	position: relative;
 }
 
-.joe, .erik, .dan,
-.rob, .noah, .murl, .tom {
+.joe, .erik, .rob,
+.noah, .murl, .tom {
 	position:  absolute;
 }
 
@@ -30,8 +30,6 @@
 	--joeY: 373px;
 	--erikX: 200px;
 	--erikY: 308px;
-	--danX: 280px;
-	--danY: 333px;
 	--robX: 220px;
 	--robY: 325px;
 	--noahX: 195px;
@@ -69,12 +67,6 @@
 .erik + .description {
 	width:  var(--erikX);
 	height: var(--erikY);
-}
-
-.dan img,
-.dan + .description {
-	width: var(--danX);
-	height: var(--danY);
 }
 
 .rob img,
@@ -117,14 +109,6 @@
 	left: calc(100vw - var(--erikX));
 }
 
-.dan,
-.dan + .description {
-	top: calc(var(--space-height) - var(--danY));
-	animation:
-		moveDanX 7s linear 0s infinite alternate,
-		moveDanY 5s linear 0s infinite alternate;
-}
-
 .rob,
 .rob + .description {
 	top: calc(var(--space-height) - var(--robY));
@@ -162,7 +146,6 @@
 
 .person:hover .joe,
 .person:hover .erik,
-.person:hover .dan,
 .person:hover .rob,
 .person:hover .noah,
 .person:hover .murl,
@@ -186,10 +169,6 @@
 
 .person .description-text {
 	margin-top: 40%;
-}
-
-.dan + .description .description-text {
-	margin-left: 35px;
 }
 
 .noah + .description .description-text {
@@ -245,24 +224,6 @@
 	}
 	to {
 		top: calc(var(--space-height) + var(--navbar-buffer) - var(--erikY));
-	}
-}
-
-@keyframes moveDanX {
-	from {
-		left: 0;
-	}
-	to {
-		left: calc(100vw - var(--danX));
-	}
-}
-
-@keyframes moveDanY {
-	from {
-		top: calc(var(--space-height) + var(--navbar-buffer) - var(--danY));
-	}
-	to {
-		top: var(--navbar-buffer);
 	}
 }
 
@@ -366,8 +327,6 @@
 		--joeY: 186.5px;
 		--erikX: 100px;
 		--erikY: 154px;
-		--danX: 140px;
-		--danY: 166.5px;
 		--robX: 110px;
 		--robY: 162.5px;
 		--noahX: 97.5px;
