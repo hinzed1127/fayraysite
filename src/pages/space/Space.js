@@ -85,7 +85,7 @@ export default function Space() {
 					Fay Ray (formerly Church Booty) has evolved. With 8 moving parts topped by the electric vocals of Mariel Fechik, 
 					the Chicago band's funk and jazz influence grows into a character all its own. Fay Ray's debut EP “No Love,” released Oct 2017, 
 					brings the band's chemistry and collaboration into the spotlight, with 4 diverse tracks that explore the intricacy of romantic relationships. 
-					Heading out of a packed 2017, Fay Ray confidently steps into their new identity. Catch them in full force at Emporium on 11/27, just a taste of what’s to come.
+					With their first musical mark, Fay Ray confidently steps into a new identity.
 				</p>
 
 				<p className='members'>Fay Ray is Mariel, Dan, Joe, Tom, Erik, Noah, Rob, and Byron.</p>
