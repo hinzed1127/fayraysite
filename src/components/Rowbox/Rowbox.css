@@ -9,13 +9,19 @@
   cursor: pointer;
 }
 
+.rowbox:hover {
+  will-change: background-position;
+  transform: rotateZ(360deg);
+}
+
 .btn:hover a,
 .selected a {
-  text-shadow:
-    1px 0 #000, 0 1px #000, -1px 0 #000, 0 -1px #000, 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000,
-    2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
+  text-shadow: 1px 0 #000, 0 1px #000, -1px 0 #000, 0 -1px #000, 1px 1px #000,
+    -1px -1px #000, 1px -1px #000, -1px 1px #000, 2px 0 #000, 0 2px #000,
+    -2px 0 #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000,
+    -2px 2px #000;
   transition: color 1s;
-  color:  #FFF;
+  color: #fff;
 }
 
 .btn-1 {
@@ -25,18 +31,21 @@
 .btn-1:hover {
   animation: halftone 1.75s infinite linear;
   /* animation-timing-function: linear; */
-  background:
-    radial-gradient(ellipse, var(--purple) 0.2em, var(--orange) 0.25em);
+  background: radial-gradient(
+    ellipse,
+    var(--purple) 0.2em,
+    var(--orange) 0.25em
+  );
   /* we gave 2 backgrounds, so need to give 2 dimensions below */
   background-size: 1em 1em;
-  color:  var(--blue);
+  color: var(--blue);
 }
 
 @keyframes halftone {
   from {
     background-position: 10em 3.5em;
   }
-  to{
+  to {
     background-position: -10em -3.5em;
   }
 }
@@ -46,12 +55,18 @@
 }
 
 .btn-2:hover {
-  animation: stripes-move .2s infinite linear;
-  background:
-    linear-gradient(45deg, var(--purple)25%,
-      var(--coral) 25%, var(--coral) 50%, var(--purple) 50%,
-      var(--purple) 75%, var(--coral) 75%, var(--coral));
-  background-size:  1em 1em;
+  animation: stripes-move 0.2s infinite linear;
+  background: linear-gradient(
+    45deg,
+    var(--purple) 25%,
+    var(--coral) 25%,
+    var(--coral) 50%,
+    var(--purple) 50%,
+    var(--purple) 75%,
+    var(--coral) 75%,
+    var(--coral)
+  );
+  background-size: 1em 1em;
   color: var(--pink);
 }
 
@@ -70,8 +85,8 @@
 
 .btn-3:hover {
   animation: sawtooth 0.25s infinite linear;
-  background:
-    linear-gradient(45deg, var(--coral) 0.5em, transparent 0.5em) 0 0/1em 1em,
+  background: linear-gradient(45deg, var(--coral) 0.5em, transparent 0.5em) 0 0/1em
+      1em,
     linear-gradient(-45deg, var(--coral) 0.5em, transparent 0.5em) 0 0/1em 1em;
   color: var(--orange);
   background-color: var(--pink);
@@ -88,9 +103,9 @@
 }
 
 .btn-4:hover {
-  animation: zigzag .4s linear infinite;
-  background:
-    linear-gradient(135deg, var(--pink) 0.25em, transparent 0.25em) -0.5em 0,
+  animation: zigzag 0.4s linear infinite;
+  background: linear-gradient(135deg, var(--pink) 0.25em, transparent 0.25em) -0.5em
+      0,
     linear-gradient(225deg, var(--pink) 0.25em, transparent 0.25em) -0.5em 0,
     linear-gradient(315deg, var(--pink) 0.25em, transparent 0.25em) 0 0,
     linear-gradient(45deg, var(--pink) 0.25em, transparent 0.25em) 0 0;
@@ -101,7 +116,7 @@
 
 @keyframes zigzag {
   100% {
-    background-position: 1em 0, 1em 0, -0.75em 0 , -0.75em 0;
+    background-position: 1em 0, 1em 0, -0.75em 0, -0.75em 0;
   }
 }
 
@@ -110,12 +125,13 @@
 }
 
 .btn-5:hover {
-  animation: blinds .75s linear infinite alternate;
-  background:
-    linear-gradient(0deg, var(--purple) 25%, transparent 25%) 0 0/0.5em 0.5em,
+  animation: blinds 0.75s linear infinite alternate;
+  background: linear-gradient(0deg, var(--purple) 25%, transparent 25%) 0 0/0.5em
+      0.5em,
     linear-gradient(0deg, var(--orange) 50%, transparent 50%) 0 0/1em 1em;
   background-color: var(--coral);
   color: var(--pink);
+  will-change: background-size;
 }
 
 @keyframes blinds {
@@ -130,16 +146,20 @@
 }
 
 .btn-6:hover {
-  animation: pulse .25s linear infinite;
-  background:
-    radial-gradient(circle, var(--blue) 43%,
-    var(--complementary-pink) 50%) 0 0/1em 1em,
-    radial-gradient(circle, var(--blue) 43%,
-    var(--complementary-pink) 50%) 0.5em 0.5em/2em 2em;
+  animation: pulse 0.25s linear infinite;
+  background: radial-gradient(
+        circle,
+        var(--blue) 43%,
+        var(--complementary-pink) 50%
+      )
+      0 0/1em 1em,
+    radial-gradient(circle, var(--blue) 43%, var(--complementary-pink) 50%)
+      0.5em 0.5em/2em 2em;
+  will-change: background-size;
 }
 
 @keyframes pulse {
-/*   50% {
+  /*   50% {
     background-position: 0.66em 0.66em, -0.33em -0.33em;
   }
   100% {
@@ -162,7 +182,7 @@
   .btn-4:hover,
   .btn-5:hover,
   .btn-6:hover {
-    animation:  none;
+    animation: none;
     background: none;
     transition: none;
   }

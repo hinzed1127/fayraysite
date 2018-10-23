@@ -1,147 +1,147 @@
 .bio-container {
-	padding: 0 5px;
+  padding: 0 5px;
 }
 
 .bio-container .bio,
 .bio-container .members {
-	padding: 0 10px;
-	text-align: justify;
-	text-align-last: center;
+  padding: 0 10px;
+  text-align: justify;
+  text-align-last: center;
 }
 
 .person {
-	position: relative;
+  position: relative;
 }
 
-.joe, .erik, .rob,
-.noah, .murl, .tom {
-	position:  absolute;
+.joe,
+.erik,
+.rob,
+.noah,
+.murl,
+.tom {
+  position: absolute;
+  will-change: top, left;
+  transform: rotateZ(360deg);
 }
 
 .space {
-	background:  url('../../img/space/stars1.png');
-	--space-height:  75vh;
-	height:  var(--space-height);
-	background-size: cover;
+  background: url('../../img/space/stars1.png');
+  --space-height: 75vh;
+  height: var(--space-height);
+  background-size: cover;
 
-	--navbar-buffer: 0px;
+  --navbar-buffer: 0px;
 
-	--joeX: 350px;
-	--joeY: 373px;
-	--erikX: 200px;
-	--erikY: 308px;
-	--robX: 220px;
-	--robY: 325px;
-	--noahX: 195px;
-	--noahY: 327px;
-	--murlX: 287px;
-	--murlY: 285px;
-	--tomX: 175px;
-	--tomY: 243px;
+  --joeX: 350px;
+  --joeY: 373px;
+  --erikX: 200px;
+  --erikY: 308px;
+  --robX: 220px;
+  --robY: 325px;
+  --noahX: 195px;
+  --noahY: 327px;
+  --murlX: 287px;
+  --murlY: 285px;
+  --tomX: 175px;
+  --tomY: 243px;
 }
 
 .space .nameHeader {
-	position: absolute;
-	left: 35vw;
-	top: 50vh;
-	z-index: 1;
-	animation: grow 2s infinite linear alternate;
+  position: absolute;
+  left: 35vw;
+  top: 50vh;
+  z-index: 1;
+  animation: grow 2s infinite linear alternate;
 }
 
 @keyframes grow {
-	from {
-		transform:  scale(0);
-	}
-	to {
-		transform: scale(0.75);
-	}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(0.75);
+  }
 }
 
 .joe img,
 .joe + .description {
-	width: var(--joeX);
-	height: var(--joeY);
+  width: var(--joeX);
+  height: var(--joeY);
 }
 
 .erik img,
 .erik + .description {
-	width:  var(--erikX);
-	height: var(--erikY);
+  width: var(--erikX);
+  height: var(--erikY);
 }
 
 .rob img,
 .rob + .description {
-	width: var(--robX);
-	height: var(--robY);
+  width: var(--robX);
+  height: var(--robY);
 }
 
 .noah img,
 .noah + .description {
-	width: var(--noahX);
-	height: var(--noahY);
+  width: var(--noahX);
+  height: var(--noahY);
 }
 
 .murl img,
 .murl + .description {
-	width: var(--murlX);
-	height: var(--murlY);
+  width: var(--murlX);
+  height: var(--murlY);
 }
 
 .tom img,
 .tom + .description {
-	width: var(--tomX);
-	height: var(--tomY);
+  width: var(--tomX);
+  height: var(--tomY);
 }
 
 .joe,
 .joe + .description {
-	animation:
-		moveJoeX 5s linear 0s infinite alternate,
-		moveJoeY 7s linear 0s infinite alternate;
-		/* 0s specifies the amount of delay before repeating */
+  animation: moveJoeX 5s linear 0s infinite alternate,
+    moveJoeY 7s linear 0s infinite alternate;
+  /* 0s specifies the amount of delay before repeating */
 }
 
 .erik,
 .erik + .description {
-	animation:
-		moveErikX 7s linear 0s infinite alternate,
-		moveErikY 5s linear 0s infinite alternate;
-	left: calc(100vw - var(--erikX));
+  animation: moveErikX 7s linear 0s infinite alternate,
+    moveErikY 5s linear 0s infinite alternate;
+  left: calc(100vw - var(--erikX));
 }
 
 .rob,
 .rob + .description {
-	top: calc(var(--space-height) - var(--robY));
-	left: calc(100vw - var(--robX));
-	animation:
-		moveRobX 7s linear 0s infinite alternate,
-		moveRobY 5s linear 0s infinite alternate;
+  top: calc(var(--space-height) - var(--robY));
+  left: calc(100vw - var(--robX));
+  animation: moveRobX 7s linear 0s infinite alternate,
+    moveRobY 5s linear 0s infinite alternate;
 }
 
 .noah,
 .noah + .description {
-	left: calc(50vw - var(--noahX));
-	animation:
-		moveNoahX 7s linear 0s infinite,
-		moveNoahY 5s linear 0s infinite alternate;
+  left: calc(50vw - var(--noahX));
+  animation: moveNoahX 7s linear 0s infinite,
+    moveNoahY 5s linear 0s infinite alternate;
 }
 
 .murl,
 .murl + .description {
-	top: calc(75vh - var(--murlY));
-	left: calc(75vw - var(--murlX));
-	animation:
-		moveMurlX 7s linear 0s infinite,
-		moveMurlY 5s linear 0s infinite alternate;
+  top: calc(75vh - var(--murlY));
+  left: calc(75vw - var(--murlX));
+  animation: moveMurlX 7s linear 0s infinite,
+    moveMurlY 5s linear 0s infinite alternate;
 }
 
 .tom,
 .tom + .description {
-	top: calc(var(--space-height) - var(--tomY));
-	left: calc(50vw - var(--tomX));
-	animation:
-		moveTomX 7s linear 0s infinite,
-		moveTomY 5s linear 0s infinite alternate;
+  top: calc(var(--space-height) - var(--tomY));
+  left: calc(50vw - var(--tomX));
+  animation: moveTomX 7s linear 0s infinite,
+    moveTomY 5s linear 0s infinite alternate;
 }
 
 .person:hover .joe,
@@ -150,199 +150,197 @@
 .person:hover .noah,
 .person:hover .murl,
 .person:hover .tom,
-.person:hover .description{
-	animation-play-state: paused;
-	opacity: .75;
+.person:hover .description {
+  animation-play-state: paused;
+  opacity: 0.75;
 }
 
 .person .description {
-	position: absolute;
-	font-size: 30px;
-	text-align: center;
-	visibility: hidden;
+  position: absolute;
+  font-size: 30px;
+  text-align: center;
+  visibility: hidden;
 }
 
 .person:hover .description {
-	opacity: 1;
-	visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .person .description-text {
-	margin-top: 40%;
+  margin-top: 40%;
 }
 
 .noah + .description .description-text {
-	margin-top: 50%;
-	margin-right: 45px;
+  margin-top: 50%;
+  margin-right: 45px;
 }
 
 .tom + .description .description-text {
-	margin-top: 55%;
-	margin-left: 10px;
+  margin-top: 55%;
+  margin-left: 10px;
 }
 
 .joe + .description .description-text {
-	margin-top: 30%;
+  margin-top: 30%;
 }
 
 .murl + .description .description-text {
-	margin-right: 15px;
+  margin-right: 15px;
 }
 
-
 @keyframes moveJoeX {
-	from {
-		left: 0;
-	}
-	to {
-		left: calc(100vw - var(--joeX));
-	}
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100vw - var(--joeX));
+  }
 }
 
 @keyframes moveJoeY {
-	from {
-		top: var(--navbar-buffer);
-	}
-	to {
-		top: calc(var(--space-height) + var(--navbar-buffer) - var(--joeY));
-	}
+  from {
+    top: var(--navbar-buffer);
+  }
+  to {
+    top: calc(var(--space-height) + var(--navbar-buffer) - var(--joeY));
+  }
 }
 
-
 @keyframes moveErikX {
-	from {
-		left: calc(100vw - var(--erikX));
-	}
-	to {
-		left: 0;
-	}
+  from {
+    left: calc(100vw - var(--erikX));
+  }
+  to {
+    left: 0;
+  }
 }
 
 @keyframes moveErikY {
-	from {
-		top: var(--navbar-buffer);
-	}
-	to {
-		top: calc(var(--space-height) + var(--navbar-buffer) - var(--erikY));
-	}
+  from {
+    top: var(--navbar-buffer);
+  }
+  to {
+    top: calc(var(--space-height) + var(--navbar-buffer) - var(--erikY));
+  }
 }
 
 @keyframes moveRobX {
-	from {
-		left: calc(100vw - var(--robX));
-	}
-	to {
-		left: 0;
-	}
+  from {
+    left: calc(100vw - var(--robX));
+  }
+  to {
+    left: 0;
+  }
 }
 
 @keyframes moveRobY {
-	from {
-		top: calc(var(--space-height) + var(--navbar-buffer) - var(--robY));
-	}
-	to {
-		top: var(--navbar-buffer);
-	}
+  from {
+    top: calc(var(--space-height) + var(--navbar-buffer) - var(--robY));
+  }
+  to {
+    top: var(--navbar-buffer);
+  }
 }
 
 @keyframes moveNoahX {
-	0% {
-		left: calc(50vw - var(--noahX));
-	}
-	31% {
-		left: calc(100vw - var(--noahX))
-	}
-	80% {
-		left: 0
-	}
-	100% {
-		left: calc(50vw - var(--noahX));
-	}
+  0% {
+    left: calc(50vw - var(--noahX));
+  }
+  31% {
+    left: calc(100vw - var(--noahX));
+  }
+  80% {
+    left: 0;
+  }
+  100% {
+    left: calc(50vw - var(--noahX));
+  }
 }
 
 @keyframes moveNoahY {
-	from {
-		top: var(--navbar-buffer);
-	}
-	to {
-		top: calc(var(--space-height) + var(--navbar-buffer) - var(--noahY));
-	}
+  from {
+    top: var(--navbar-buffer);
+  }
+  to {
+    top: calc(var(--space-height) + var(--navbar-buffer) - var(--noahY));
+  }
 }
 
 @keyframes moveMurlX {
-	0% {
-		left: calc(75vw - var(--murlX));
-	}
-	15% {
-		left: calc(100vw - var(--murlX))
-	}
-	68% {
-		left: 0
-	}
-	100% {
-		left: calc(75vw - var(--murlX));
-	}
+  0% {
+    left: calc(75vw - var(--murlX));
+  }
+  15% {
+    left: calc(100vw - var(--murlX));
+  }
+  68% {
+    left: 0;
+  }
+  100% {
+    left: calc(75vw - var(--murlX));
+  }
 }
 
 @keyframes moveMurlY {
-	from {
-		top: var(--navbar-buffer);
-	}
-	to {
-		top: calc(var(--space-height) + var(--navbar-buffer) - var(--murlY));
-	}
+  from {
+    top: var(--navbar-buffer);
+  }
+  to {
+    top: calc(var(--space-height) + var(--navbar-buffer) - var(--murlY));
+  }
 }
 
 @keyframes moveTomX {
-	0% {
-		left: calc(50vw - var(--tomX));
-	}
-	31% {
-		left: calc(100vw - var(--tomX))
-	}
-	80% {
-		left: 0
-	}
-	100% {
-		left: calc(50vw - var(--tomX));
-	}
+  0% {
+    left: calc(50vw - var(--tomX));
+  }
+  31% {
+    left: calc(100vw - var(--tomX));
+  }
+  80% {
+    left: 0;
+  }
+  100% {
+    left: calc(50vw - var(--tomX));
+  }
 }
 
 @keyframes moveTomY {
-	from {
-		top: calc(var(--space-height) + var(--navbar-buffer) - var(--tomY));
-	}
-	to {
-		top: var(--navbar-buffer);
-	}
+  from {
+    top: calc(var(--space-height) + var(--navbar-buffer) - var(--tomY));
+  }
+  to {
+    top: var(--navbar-buffer);
+  }
 }
 
 @media (max-width: 768px) {
-	.space {
-		--space-height:  65vh;
-		height: var(--space-height);
-		--navbar-buffer: 46px;
+  .space {
+    --space-height: 65vh;
+    height: var(--space-height);
+    --navbar-buffer: 46px;
 
-		--joeX: 175px;
-		--joeY: 186.5px;
-		--erikX: 100px;
-		--erikY: 154px;
-		--robX: 110px;
-		--robY: 162.5px;
-		--noahX: 97.5px;
-		--noahY: 163.5px;
-		--murlX: 143.5px;
-		--murlY: 142.5px;
-		--tomX: 87.5px;
-		--tomY: 121.5px;
-	}
+    --joeX: 175px;
+    --joeY: 186.5px;
+    --erikX: 100px;
+    --erikY: 154px;
+    --robX: 110px;
+    --robY: 162.5px;
+    --noahX: 97.5px;
+    --noahY: 163.5px;
+    --murlX: 143.5px;
+    --murlY: 142.5px;
+    --tomX: 87.5px;
+    --tomY: 121.5px;
+  }
 
-	.space .nameHeader {
-		position: absolute;
-		left: 15vh;
-		top: 35vh;
-		font-size: 40px;
-		z-index: 1;
-		animation: grow 2s infinite linear alternate;
-	}
+  .space .nameHeader {
+    position: absolute;
+    left: 15vh;
+    top: 35vh;
+    font-size: 40px;
+    z-index: 1;
+    animation: grow 2s infinite linear alternate;
+  }
 }
