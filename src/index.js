@@ -9,7 +9,6 @@ import Shows from './pages/shows/Shows';
 import Space from './pages/space/Space';
 import NavBar from './components/NavBar/NavBar';
 import './index.css';
-import 'babel-polyfill';
 // import registerServiceWorker from './registerServiceWorker';
 
 render(
